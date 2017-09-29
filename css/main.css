@@ -18,11 +18,11 @@ button.btn_buy:hover::before { transform: translate(-3px, -3px); }
 
 @media (orientation: landscape) { button.btn_buy { margin-top: 3.8%; margin-left: 75%; }
   #arrow { bottom: 11.2%; left: 5.5%; } }
-header { font-family: "Gruppo", cursive; font-weight: lighter; background-color: #434f34; color: #fefefe; height: 100vh; width: 100%; }
+header { font-family: "Gruppo", cursive; font-weight: lighter; background-color: #434f34; color: #fefefe; position: fixed; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1; }
 
 div.header_top { height: 8%; width: 100%; background-color: #fefefe; padding: 1% 2.8%; position: relative; }
 div.header_top #logo { height: 100%; width: auto; }
-div.header_top contact { color: #121111; font-size: 1.4rem; font-weight: 600; display: block; position: absolute; top: 50%; right: 2.8%; transform: translateY(-50%); }
+div.header_top address { color: #121111; font-size: 1.4rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; transform: translateY(-50%); }
 
 div.header_img { background-image: url(../img/header_book_cover.jpg); background-repeat: no-repeat; background-size: cover; background-position: 31%; height: 92%; position: relative; padding: 3.2%; }
 div.header_img h1 { font-size: 3rem; width: 75%; margin-left: auto; margin-right: auto; text-align: center; }
@@ -32,9 +32,10 @@ div.header_img h2 { font-size: 1.4rem; width: 70%; margin-left: auto; margin-rig
 div.header_img h2:first-child { font-size: 1.8rem; }
 
 @media (orientation: landscape) { div.header_top { height: 12%; width: 100%; background-color: #fefefe; padding: 1% 2.8%; position: relative; }
-  div.header_top contact { font-size: 1.8rem; }
+  div.header_top address { font-size: 1.8rem; }
   div.header_img { background-position: 2%; padding: 1.8%; }
   div.header_img h1 { width: 30%; margin-left: 2.8%; }
   div.header_img h2 { width: 30%; margin-left: 2.8%; padding-top: 1%; padding-bottom: 1%; } }
+article#article_about_book { height: 100vh; background-color: #fefefe; margin-top: 100vh; position: relative; z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */

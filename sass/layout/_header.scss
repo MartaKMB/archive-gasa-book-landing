@@ -3,8 +3,12 @@ header {
     font-weight: lighter;
     background-color: $header_bckg;
     color: #fefefe;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
-    width: 100%;   
+    width: 100%; 
+    z-index: 1;
 }
 
 div.header_top {
@@ -19,11 +23,12 @@ div.header_top {
         width: auto;
     }
     
-    contact {
+    address {
         color: $font_black_color;
         font: {
             size: 1.4rem;
             weight: 600;
+            style: normal;
         } 
         
         display: block;
@@ -102,7 +107,7 @@ div.header_img {
         padding: 1% 2.8%;
         position: relative;
 
-        contact {
+        address {
             font-size: 1.8rem;
         }
     }
