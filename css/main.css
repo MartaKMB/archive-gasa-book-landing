@@ -9,15 +9,25 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 
 button.btn_buy { width: 12rem; height: 4rem; position: relative; z-index: 1; font-size: 1.6rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; }
 button.btn_buy::before { content: ""; position: absolute; top: 0; left: 0; background-color: #cf1e25; opacity: .8; display: block; width: inherit; height: inherit; z-index: -1; transform: translate(3px, 3px); transition: .8s ease; }
-button.btn_buy:hover { /* should be only for desktop */ cursor: pointer; }
 button.btn_buy:hover::before { transform: translate(-3px, -3px); }
 
 #arrow { color: #fefefe; width: 40px; height: 40px; border: 2px solid #fefefe; position: absolute; bottom: 2.8%; left: 12.5%; border-radius: 50%; font-size: 3rem; text-align: center; text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe; overflow: hidden; transition: .8s ease; }
-#arrow:hover { border-color: #cf1e25; background-color: #cf1e25; opacity: .8; /* should be only for desktop */ cursor: pointer; }
+#arrow:hover { border-color: #cf1e25; background-color: #cf1e25; opacity: .8; }
 #arrow .fa-angle-down { animation: arrow 1.4s infinite linear; }
 
+/* media queries */
 @media (orientation: landscape) { button.btn_buy { margin-top: 3.8%; margin-left: 75%; }
   #arrow { bottom: 11.2%; left: 5.5%; } }
+@media (min-width: 768px) { button.btn_buy { width: 18rem; height: 4.6rem; font-size: 2rem; margin-top: 4.5%; margin-left: 2.8%; }
+  #arrow { width: 60px; height: 60px; font-size: 5rem; left: 92%; } }
+@media (min-width: 768px) and (orientation: portrait) { button.btn_buy { width: 22rem; height: 8rem; font-size: 2.4rem; margin-top: 8.5%; margin-left: 17.5%; }
+  button.btn_buy::before { transform: translate(5px, 5px); }
+  button.btn_buy:hover { cursor: pointer; }
+  button.btn_buy:hover::before { transform: translate(-5px, -5px); }
+  #arrow { width: 60px; height: 60px; left: 17.5%; font-size: 5rem; }
+  #arrow:hover { cursor: pointer; } }
+@media (min-width: 1024px) and (orientation: portrait) { button.btn_buy { width: 24rem; height: 8rem; font-size: 3.2rem; margin-top: 8.5%; margin-left: 17.5%; }
+  #arrow { width: 80px; height: 80px; left: 17.5%; font-size: 6rem; } }
 header { font-family: "Gruppo", cursive; font-weight: lighter; background-color: #434f34; color: #fefefe; position: fixed; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1; }
 
 div.header_top { height: 8%; width: 100%; background-color: #fefefe; padding: 1% 2.8%; position: relative; }
@@ -31,11 +41,23 @@ div.header_img h1 span::after { content: '\A'; white-space: pre; }
 div.header_img h2 { font-size: 1.4rem; width: 70%; margin-left: auto; margin-right: auto; padding-top: 2.6%; padding-bottom: 2.6%; text-align: center; }
 div.header_img h2:first-child { font-size: 1.8rem; }
 
+/* media queries */
 @media (orientation: landscape) { div.header_top { height: 12%; width: 100%; background-color: #fefefe; padding: 1% 2.8%; position: relative; }
   div.header_top address { font-size: 1.8rem; }
   div.header_img { background-position: 2%; padding: 1.8%; }
   div.header_img h1 { width: 30%; margin-left: 2.8%; }
   div.header_img h2 { width: 30%; margin-left: 2.8%; padding-top: 1%; padding-bottom: 1%; } }
+@media (min-width: 768px) { div.header_img h1 { font-size: 5rem; width: 35%; }
+  div.header_img h2 { width: 35%; font-size: 2.4rem; padding-top: .2%; padding-bottom: .2%; }
+  div.header_img h2:first-child { font-size: 2.8rem; } }
+@media (min-width: 768px) and (orientation: portrait) { div.header_top address { font-size: 2.6rem; }
+  div.header_img h1 { font-size: 5.8rem; width: 65%; }
+  div.header_img h2 { font-size: 2.4rem; padding-top: 2%; padding-bottom: 2%; }
+  div.header_img h2:first-child { font-size: 2.8rem; } }
+@media (min-width: 1024px) and (orientation: portrait) { div.header_top address { font-size: 3.4rem; }
+  div.header_img h1 { font-size: 6.8rem; width: 65%; }
+  div.header_img h2 { font-size: 3rem; width: 65%; padding-top: 2%; padding-bottom: 2%; }
+  div.header_img h2:first-child { font-size: 3.6rem; } }
 article#article_about_book { height: 100vh; background-color: #fefefe; margin-top: 100vh; position: relative; z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */

@@ -42,8 +42,6 @@ button.btn_buy {
     }
     
     &:hover {
-        /* should be only for desktop */
-        cursor: pointer;
         &::before {
             transform: translate(-3px, -3px);
         }
@@ -69,8 +67,6 @@ button.btn_buy {
         border-color: $btn_bckg;
         background-color: $btn_bckg;
         opacity: .8;
-        /* should be only for desktop */
-        cursor: pointer;
     }
     
     .fa-angle-down {
@@ -78,6 +74,7 @@ button.btn_buy {
     }
 }
 
+/* media queries */
 
 @media (orientation: landscape) {
     
@@ -93,3 +90,77 @@ button.btn_buy {
         left: 5.5%;
     }
 }
+
+@media (min-width: 530px) {}
+
+@media (min-width: 768px) {
+    button.btn_buy {
+        width: 18rem;
+        height: 4.6rem;
+        font-size: 2rem;
+        margin: {
+            top: 4.5%;
+            left: 2.8%;
+        }
+    }
+    #arrow {
+        width: 60px;
+        height: 60px;
+        font-size: 5rem;
+        left: 92%;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    button.btn_buy {
+        width: 22rem;
+        height: 8rem;
+        font-size: 2.4rem;
+        margin: {
+            top: 8.5%;
+            left: 17.5%;
+        }
+        &::before {
+            transform: translate(5px, 5px);
+        }
+        &:hover {
+            cursor: pointer;
+            &::before {
+                transform: translate(-5px, -5px);
+            }
+        }
+    }
+    #arrow {
+        width: 60px;
+        height: 60px;
+        left: 17.5%;
+        font-size: 5rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    button.btn_buy {
+        width: 24rem;
+        height: 8rem;
+        font-size: 3.2rem;
+        margin: {
+            top: 8.5%;
+            left: 17.5%;
+        }
+    }
+    #arrow {
+        width: 80px;
+        height: 80px;
+        left: 17.5%;
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 1280px) {}
+
+@media (min-width: 1600px) {}
