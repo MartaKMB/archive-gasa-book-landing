@@ -1,9 +1,9 @@
+/* header */
+
 $header_bckg: rgba(67, 79, 52, 1);
 $font_black_color: #121111;
 
-
 $btn_bckg: rgba(207, 30, 37, 1);
-$font_rosy_color: #B5AA8B;
 
 $header_font: 'Gruppo', cursive;
 
@@ -11,4 +11,16 @@ $header_font: 'Gruppo', cursive;
     0% { transform: translateY(-80px)}
     50% { transform: translateY(0px)}
     100% { transform: translateY(80px)}
+}
+
+/* article about book */
+
+$about_title_bckg: #5A789A;
+
+/* article about options */
+
+$rosy_color: #B5AA8B;
+
+span.up {
+    vertical-align: super;
 }

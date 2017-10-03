@@ -10,6 +10,8 @@ button {
     text-align: center;
 }
 
+/* header */
+
 button.btn_buy {
     width: 12rem;
     height: 4rem;
@@ -71,6 +73,31 @@ button.btn_buy {
     
     .fa-angle-down {
         animation: arrow 1.4s infinite linear;
+    }
+}
+
+/* article */
+
+button.btn_option {
+    width: 70%;
+    height: 4rem;
+    font: {
+        size: 1.2rem;
+        weight: 600;
+    }
+    margin: {
+        top: 7.5%;
+        left: 12.5%;
+    }
+    text-align: center;
+    padding: 1%;
+    background-color: #fefefe;
+    border-color: $btn_bckg;
+    color: $btn_bckg;
+    
+    &:hover {
+        background-color: $btn_bckg;
+        color: #fefefe;
     }
 }
 

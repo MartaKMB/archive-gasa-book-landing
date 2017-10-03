@@ -2,11 +2,19 @@
 
 html { font-size: 10px; }
 
+a { text-decoration: none; color: inherit; }
+
+/* header */
 @keyframes arrow { 0% { transform: translateY(-80px); }
   50% { transform: translateY(0px); }
   100% { transform: translateY(80px); } }
+/* article about book */
+/* article about options */
+span.up { vertical-align: super; }
+
 button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; color: #FFFFFF; margin: 1rem; display: block; font-family: "Gruppo", cursive; letter-spacing: .4rem; text-align: center; }
 
+/* header */
 button.btn_buy { width: 12rem; height: 4rem; position: relative; z-index: 1; font-size: 1.6rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; }
 button.btn_buy::before { content: ""; position: absolute; top: 0; left: 0; background-color: #cf1e25; opacity: .8; display: block; width: inherit; height: inherit; z-index: -1; transform: translate(3px, 3px); transition: .8s ease; }
 button.btn_buy:hover::before { transform: translate(-3px, -3px); }
@@ -14,6 +22,10 @@ button.btn_buy:hover::before { transform: translate(-3px, -3px); }
 #arrow { color: #fefefe; width: 40px; height: 40px; border: 2px solid #fefefe; position: absolute; bottom: 2.8%; left: 12.5%; border-radius: 50%; font-size: 3rem; text-align: center; text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe; overflow: hidden; transition: .8s ease; }
 #arrow:hover { border-color: #cf1e25; background-color: #cf1e25; opacity: .8; }
 #arrow .fa-angle-down { animation: arrow 1.4s infinite linear; }
+
+/* article */
+button.btn_option { width: 70%; height: 4rem; font-size: 1.2rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; padding: 1%; background-color: #fefefe; border-color: #cf1e25; color: #cf1e25; }
+button.btn_option:hover { background-color: #cf1e25; color: #fefefe; }
 
 /* media queries */
 @media (orientation: landscape) { button.btn_buy { margin-top: 3.8%; margin-left: 75%; }
@@ -58,6 +70,46 @@ div.header_img h2:first-child { font-size: 1.8rem; }
   div.header_img h1 { font-size: 6.8rem; width: 65%; }
   div.header_img h2 { font-size: 3rem; width: 65%; padding-top: 2%; padding-bottom: 2%; }
   div.header_img h2:first-child { font-size: 3.6rem; } }
-article#article_about_book { height: 100vh; background-color: #fefefe; margin-top: 100vh; position: relative; z-index: 2; }
+article { font-family: "Gruppo", cursive; display: flex; flex-direction: column; }
+
+article#o_ksiazce, article#opcje_zakupu, article#o_autorce, article#opcja_ksiazka_autograf, article#patroni { min-height: 100vh; background-color: #fefefe; margin-top: 100vh; position: relative; z-index: 2; padding: 4%; }
+article#o_ksiazce h3.title_about_book, article#opcje_zakupu h3.title_about_book, article#o_autorce h3.title_about_book, article#opcja_ksiazka_autograf h3.title_about_book, article#patroni h3.title_about_book, article#opcje_zakupu h3.title_option, article#o_ksiazce article#o_autorce h3, article#o_autorce article#o_ksiazce h3, article#o_autorce h3, article#o_ksiazce article#opcja_ksiazka_autograf h3, article#opcja_ksiazka_autograf article#o_ksiazce h3, article#opcja_ksiazka_autograf h3, article#o_ksiazce article#patroni h3, article#patroni article#o_ksiazce h3, article#patroni h3 { background-color: #5A789A; height: 10%; width: 100%; text-align: center; color: #fefefe; font-size: 2.8rem; letter-spacing: .4rem; padding: 4%; }
+article#o_ksiazce section, article#opcje_zakupu section, article#o_autorce section, article#opcja_ksiazka_autograf section, article#patroni section { padding: 2%; font-size: 1.8rem; line-height: 2rem; }
+article#o_ksiazce section div, article#opcje_zakupu section div, article#o_autorce section div, article#opcja_ksiazka_autograf section div, article#patroni section div { margin-top: 2%; }
+article#o_ksiazce section.about_gasa, article#opcje_zakupu section.about_gasa, article#o_autorce section.about_gasa, article#opcja_ksiazka_autograf section.about_gasa, article#patroni section.about_gasa { font-size: 1.6rem; }
+article#o_ksiazce section.about_gasa div#introduction, article#opcje_zakupu section.about_gasa div#introduction, article#o_autorce section.about_gasa div#introduction, article#opcja_ksiazka_autograf section.about_gasa div#introduction, article#patroni section.about_gasa div#introduction { font-weight: 600; color: #5A789A; }
+article#o_ksiazce aside, article#opcje_zakupu aside, article#o_autorce aside, article#opcja_ksiazka_autograf aside, article#patroni aside { padding: 2%; font-size: 1.4rem; line-height: 2rem; height: 20rem; width: 100%; position: relative; margin-top: 4%; margin-bottom: 6%; }
+article#o_ksiazce aside h4, article#opcje_zakupu aside h4, article#o_autorce aside h4, article#opcja_ksiazka_autograf aside h4, article#patroni aside h4 { background-color: #5A789A; text-align: center; color: #fefefe; font-size: 2rem; letter-spacing: .4rem; padding-top: 2%; position: absolute; top: 0; right: 0; width: 97%; height: 97%; z-index: -1; }
+article#o_ksiazce aside ul, article#opcje_zakupu aside ul, article#o_autorce aside ul, article#opcja_ksiazka_autograf aside ul, article#patroni aside ul { border: 2px solid #5A789A; background-color: #fefefe; color: #5A789A; font-weight: 600; position: absolute; bottom: 0; left: 0; width: 97%; z-index: 1; }
+article#o_ksiazce aside ul li, article#opcje_zakupu aside ul li, article#o_autorce aside ul li, article#opcja_ksiazka_autograf aside ul li, article#patroni aside ul li { list-style: none; margin-left: 2%; }
+
+article#opcje_zakupu { margin-top: 0; background-color: #B5AA8B; color: #fefefe; }
+article#opcje_zakupu h3.title_option { background-color: inherit; }
+article#opcje_zakupu section { border: 2px solid #fefefe; margin-top: 6%; margin-bottom: 4%; padding: 3%; position: relative; }
+article#opcje_zakupu section div { margin-top: 4%; }
+article#opcje_zakupu section div.options_num { border: 2px solid #fefefe; height: 40px; width: 40px; border-radius: 50%; text-align: center; font-size: 3rem; font-weight: 600; padding: 2%; background-color: #B5AA8B; position: absolute; top: -25px; leftt: 2%; z-index: 1; }
+article#opcje_zakupu section h4 { text-align: center; padding: 2%; margin-top: 4%; font-size: 2rem; }
+article#opcje_zakupu section span.important_txt { font-weight: 600; background-color: #cf1e25; padding: .8%; }
+article#opcje_zakupu section span.up { font-size: 1.2rem; }
+article#opcje_zakupu section a:hover { background-color: #cf1e25; }
+
+article#o_autorce { margin-top: 0; background-color: #fefefe; font-size: 1.8rem; }
+article#o_autorce h3 { background-color: inherit; color: #5A789A; }
+article#o_autorce img.author_pict { display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto; }
+article#o_autorce h4 { margin-left: auto; margin-right: auto; margin-top: 4%; margin-bottom: 4%; font-size: 3rem; }
+article#o_autorce h4::after { content: ''; display: block; border-top: 2px solid #5A789A; margin-top: 2.8%; }
+article#o_autorce div { margin-bottom: 4%; padding: 2%; }
+
+article#opcja_ksiazka_autograf { margin-top: 0; }
+article#opcja_ksiazka_autograf h3 { background-color: #B5AA8B; color: #fefefe; font-size: 2rem; }
+article#opcja_ksiazka_autograf h4 { text-align: center; color: #cf1e25; margin-top: 4%; margin-bottom: 6%; }
+article#opcja_ksiazka_autograf section { border: 2px solid #B5AA8B; padding: 2%; }
+article#opcja_ksiazka_autograf section div { padding: 2%; }
+
+article#patroni { margin-top: -2%; position: relative; color: black; }
+article#patroni ul { position: absolute; top: 15%; width: 80%; height: 20rem; left: 4%; }
+article#patroni ul img { width: auto; max-width: 100%; height: auto; max-height: 8rem; }
+article#patroni ul li { width: 50%; list-style-type: none; position: absolute; top: 0; padding: 2%; height: 20rem; opacity: 0; text-align: center; font-size: 1.4rem; transition: 1s opacity; margin: 2%; }
+article#patroni ul .active { opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

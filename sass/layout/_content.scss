@@ -1,7 +1,280 @@
-article#article_about_book {
-    height: 100vh;
+article {
+    font-family: $header_font;
+    display: flex;
+    flex-direction: column;
+}
+
+article#o_ksiazce {
+    min-height: 100vh;
     background-color: #fefefe;
     margin-top: 100vh;
     position: relative;
     z-index: 2;
+    padding: 4%;
+    
+    h3.title_about_book {
+        background-color: $about_title_bckg;
+        height: 10%;
+        width: 100%;
+        text-align: center;
+        color: #fefefe;
+        font-size: 2.8rem;
+        letter-spacing: .4rem;
+        padding: 4%;
+    }
+    
+    section {
+        padding: 2%;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        
+        div {
+            margin: {
+                top: 2%;
+            }
+        }
+    }
+    
+    section.about_gasa {
+        font-size: 1.6rem;
+        div#introduction {
+            font-weight: 600;
+            color: $about_title_bckg;
+        }
+    }
+    
+    aside {
+        padding: 2%;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        height: 20rem;
+        width: 100%;
+        position: relative;
+        margin: {
+            top: 4%;
+            bottom: 6%;
+        }
+  
+        h4 {
+            background-color: $about_title_bckg;
+            text-align: center;
+            color: #fefefe;
+            font-size: 2rem;
+            letter-spacing: .4rem;
+            padding-top: 2%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 97%;
+            height: 97%;
+            z-index: -1;
+        }
+        
+        ul {
+            border: 2px solid $about_title_bckg;
+            background-color: #fefefe;
+            color: $about_title_bckg;
+            font-weight: 600;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 97%;
+            z-index: 1;
+             
+            li {
+                list-style: none;
+                margin-left: 2%;
+            }
+            
+        } 
+    }
+}
+
+article#opcje_zakupu {
+    @extend article#o_ksiazce;
+    margin-top: 0;
+    background-color: $rosy_color;
+    color: #fefefe;
+    
+    h3.title_option {
+        @extend h3.title_about_book;
+        background-color: inherit;  
+    }
+    
+    section {
+        border: 2px solid #fefefe;
+        margin: {
+            top: 6%;
+            bottom: 4%;
+        }
+        padding: 3%;
+        position: relative;
+        
+        div {
+            margin-top: 4%;
+        }
+        
+        div.options_num {
+            border: 2px solid #fefefe;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 600;
+            padding: 2%;
+            background-color: $rosy_color;
+            position: absolute;
+            top: -25px;
+            leftt: 2%;
+            z-index: 1;
+        }
+        
+        h4 {
+            text-align: center;
+            padding: 2%;
+            margin-top: 4%;
+            font-size: 2rem;
+            
+        }
+        
+        span.important_txt {
+            font-weight: 600;
+            background-color: $btn_bckg;
+            padding: .8%;
+        }
+        
+        span.up {
+            font-size: 1.2rem;
+        }
+        
+        a:hover {
+            background-color: $btn_bckg;
+        }
+    }
+}
+
+article#o_autorce {
+    @extend article#o_ksiazce;
+    margin-top: 0;
+    background-color: #fefefe;
+    font-size: 1.8rem;
+    
+    h3 {
+        @extend h3.title_about_book;
+        background-color: inherit;  
+        color: $about_title_bckg;
+    }
+    
+    img.author_pict {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+    
+    h4 {
+        margin: {
+            left: auto;
+            right: auto;
+            top: 4%;
+            bottom: 4%;
+        }
+        font-size: 3rem;
+        
+        &::after {
+            content: '';
+            display: block;
+            border-top: 2px solid $about_title_bckg;
+            margin: {
+                top: 2.8%;
+            }
+        }
+    }
+    
+    div {
+        margin-bottom: 4%;
+        padding: 2%;
+    }
+}
+
+article#opcja_ksiazka_autograf {
+    @extend article#o_ksiazce;
+    margin-top: 0;
+    
+    h3 {
+        @extend h3.title_about_book;
+        background-color: $rosy_color;
+        color: #fefefe;
+        font-size: 2rem;
+    }
+    
+    h4 {
+        text-align: center;
+        color: $btn_bckg;
+        margin: {
+            top: 4%;
+            bottom: 6%;
+        }
+    }
+    
+    section {
+        border: 2px solid $rosy_color;
+        padding: 2%;
+        
+        div {
+            padding: 2%;
+        }
+    }
+}
+
+article#patroni {
+    @extend article#o_ksiazce;
+    margin-top: -2%;
+    position: relative;
+    color: black;
+    
+    h3 {
+        @extend h3.title_about_book;
+    }
+    
+    ul {
+		position: absolute;
+		top: 15%;
+		width: 80%;
+		height: 20rem;
+        left: 4%;
+        
+        img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 8rem;
+        }
+        
+        li {
+            width: 50%;
+            list-style-type: none;
+            position: absolute;
+            top: 0;
+            padding: 2%;
+            height: 20rem; 
+            opacity: 0;
+            text-align: center;
+            font-size: 1.4rem;
+            transition: 1s opacity; 
+            margin: 2%;
+            
+        }
+        
+        .active {
+            opacity: 1;
+        }
+	}
+	
+  
+
 }
