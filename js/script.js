@@ -4,33 +4,33 @@ $("#arrow").on("click", function() {
     }, 1200)
 });
 
-/* slider - inspiration: https://codepen.io/jlnljn/pen/qRxqzR?editors=0010 */
+/* slider - inspiration: Julien Lejeune - https://codepen.io/jlnljn/pen/qRxqzR?editors=0010 */
 
-var timer = 4000;
+let timer = 4000;
 
-var i = 0;
-var max = $('#c > li').length;
+let i = 0;
+const max = $('#carousel > li').length;
  
-	$("#c > li").eq(i).addClass('active').css('left','2%');
-	$("#c > li").eq(i + 1).addClass('active').css('left','62%');
+	$("#carousel > li").eq(i).addClass('active');
+        //.css('left','2%');
+	   //$("#c > li").eq(i + 1).addClass('active').css('left','62%');
  
-
 	setInterval(function(){ 
 
-		$("#c > li").removeClass('active');
+		$("#carousel > li").removeClass('active');
 
-		$("#c > li").eq(i).css('transition-delay','0.25s');
-		$("#c > li").eq(i + 1).css('transition-delay','0.5s');
+		$("#carousel > li").eq(i).css('transition-delay','0.25s');
+		//$("#c > li").eq(i + 1).css('transition-delay','0.5s');
 
-		if (i < max-2) {
-			i = i+2; 
+		if (i < max-1) {
+			i = i+1; 
 		}
-
 		else { 
 			i = 0; 
 		}  
 
-		$("#c > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
-		$("#c > li").eq(i + 1).css('left','50%').addClass('active').css('transition-delay','1.5s');
+		$("#carousel > li").eq(i).addClass('active').css('transition-delay','1.25s');
+		//$("#c > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
+		//$("#c > li").eq(i + 1).css('left','50%').addClass('active').css('transition-delay','1.5s');
 	
 	}, timer);

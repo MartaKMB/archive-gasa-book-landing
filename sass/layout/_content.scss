@@ -203,6 +203,7 @@ article#o_autorce {
 
 article#opcja_ksiazka_autograf {
     @extend article#o_ksiazce;
+    min-height: auto;
     margin-top: 0;
     
     h3 {
@@ -233,7 +234,8 @@ article#opcja_ksiazka_autograf {
 
 article#patroni {
     @extend article#o_ksiazce;
-    margin-top: -2%;
+    margin-top: 0;
+    min-height: 50vh;
     position: relative;
     color: black;
     
@@ -243,20 +245,21 @@ article#patroni {
     
     ul {
 		position: absolute;
-		top: 15%;
+		top: 25%;
 		width: 80%;
 		height: 20rem;
-        left: 4%;
-        
-        img {
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            max-height: 8rem;
-        }
+        left: 50%;
         
         li {
-            width: 50%;
+            
+            img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                max-height: 10rem;
+            }
+            
+            width: 100%;
             list-style-type: none;
             position: absolute;
             top: 0;
@@ -264,17 +267,83 @@ article#patroni {
             height: 20rem; 
             opacity: 0;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
+            transform: translateX(-50%);
             transition: 1s opacity; 
-            margin: 2%;
-            
+            margin: 2%;   
         }
         
         .active {
             opacity: 1;
         }
 	}
-	
-  
 
+}
+
+article#recenzje {
+    @extend article#o_ksiazce;
+    margin-top: 0;
+    background-color: $dark_olive;
+    
+    h3 {
+        @extend h3.title_about_book;
+        background-color: $dark_olive;
+    }
+    
+    section.review {
+        background-color: #fefefe;
+        
+        div.review_about {
+            display: flex;
+            flex-wrap: wrap;
+            color: $dark_olive;
+            
+            img {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                margin: 2%;
+                align-self: flex-start;
+                box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.65);
+            }
+            
+            h4 {
+                text-align: center;
+                padding: 2%;
+                margin: {
+                    top: 6%;
+                    left: 4%;
+                }
+                flex-basis: 60%;
+                font-size: 2rem;
+            }
+            
+            h5 {
+                flex-basis: 90%;
+                font-size: 1.6rem;
+                margin: {
+                    left: auto;
+                    right: auto;
+                }
+                
+            }
+        }
+        
+        div.review_txt {
+            padding: 2%;
+            font-size: 2rem;
+        }
+        
+        &::after {
+            content: '';
+            display: block;
+            border-top: 2px solid $dark_olive;
+            margin: {
+                top: 2.8%;
+                bottom: 2.8%;
+            }
+        }
+        
+        
+    }
 }

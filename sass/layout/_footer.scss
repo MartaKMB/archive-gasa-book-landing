@@ -1,0 +1,24 @@
+footer {
+    min-height: 5vh;
+    background-color: #fefefe;
+    margin: {
+        top: 0;
+        bottom: 0;
+    } 
+    position: relative;
+    z-index: 2;
+    padding: 4%;
+    font-family: $header_font;
+    text-align: center;
+    
+    address {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 2%;
+    }
+    
+    div#signature {
+        font-size: 1.2rem;
+    }
+}
