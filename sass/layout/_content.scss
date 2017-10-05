@@ -4,7 +4,7 @@ article {
     flex-direction: column;
 }
 
-article.desktop_only_pict, article.desktop_only_book_options {
+article.desktop_only_pict, article.desktop_only_book_options, img.desktop_only_patron {
         display: none;
 }
 
@@ -349,7 +349,7 @@ article#recenzje {
     }
 }
 
-/* media queries */
+/* ------------ media queries ---------- */
 
 @media (orientation: landscape) {
     article#opcje_zakupu {
@@ -411,8 +411,256 @@ article#recenzje {
 @media (min-width: 530px) {}
 
 @media (min-width: 768px) {
-    //tutaj
+    main {
+        min-height: 420rem;
+        width: 100%;
+        background-color: #fefefe;
+        margin-top: 100vh;
+        position: relative;
+        z-index: 2;
+    
+        article.desktop_only_pict {
+            display: block;
+            position: absolute;
+            top: 8rem;
+            left: 2.8%;
+            width: 52%;
+            
+            img {
+                width: 100%;
+                height: auto;
+            }
+        } 
+    }
+    
+    article#o_ksiazce {
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48%;
+        height: auto;
+
+        section {
+            padding: 1%;
+            font-size: 2rem;
+            
+        }
+
+        section.about_gasa {
+            font-size: 1.8rem;
+        }  
+    }
+    
+    article#opcje_zakupu {
+        position: absolute;
+        top: 38rem;
+        left: 3%;
+        width: 48%;
+        height: 136rem;
+        padding: 1%;
+        
+        h3.title_option {
+            font-size: 2rem;
+            padding: 1%;
+        }
+    
+        section {
+            font-size: 1.6rem;
+            margin-top: 2.2%;
+            
+            div {
+                margin-top: 4%;
+                padding-left: 2%;
+            }
+            
+            div.options_num {
+                height: 40px;
+                width: 40px;
+                font-size: 2rem;
+                padding: 1%;    
+                top: -30px;
+                left: 5%;
+            }
+            h4 {
+                font-size: 2rem;
+                padding-top: 3%;
+            }
+
+            a:hover {
+                background-color: $btn_bckg;
+            }
+        }
+    }
+    
+    article.desktop_only_book_options {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 108rem;
+        width: 45%;
+        height: 50rem;
+        border: 2px solid $rosy_color;
+        
+        ul {
+            position: absolute;
+            top: 3rem;
+            width: 80%;
+            height: inherit;
+            right: 5%;
+            li {
+                img {   
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                }
+                list-style-type: none;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                text-align: center;
+                font-size: 1.8rem;
+                transition: 1s opacity; 
+                margin: 2%;   
+                p {
+                    padding-top: 2%;
+                }
+            }
+            .active {
+                opacity: 1;
+            }
+        }
+        
+    }
+
+    article#o_autorce {
+        position: absolute;
+        top: 178rem;
+        left: 5%;
+        width: 90%;
+        
+        h3 {
+            width: 40%;
+            position: absolute;
+            top: 4rem;
+            left: 3rem;
+        }
+
+        img.author_pict {
+            display: block;
+            width: 65%;
+            height: auto;
+            margin: {
+                left: auto;
+                right: 2%;
+                bottom: 3%;
+            }
+        }
+
+        h4 {
+            font-size: 2.6rem;
+            position: absolute;
+            top: 8rem;
+            left: 4rem;
+           
+        }
+
+        div {
+            margin-bottom: 1%;
+            padding: 1%;
+            
+        }
+    }
+
+    article#opcja_ksiazka_autograf {
+        position: absolute;
+        top: 224rem;
+        left: 2%;
+        width: 90%;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 5%;
+        }
+        padding-top: 1%;
+
+        h4 {
+            font-size: 2.4rem;
+            margin-bottom: 4%;
+        }
+
+        section {
+            border: 2px solid $rosy_color;
+            padding: 2%;
+
+            div {
+                padding: 0;
+            }
+            
+            a:hover {
+                background-color: $btn_bckg;
+                color: #fefefe;
+            }
+            
+            button.btn_option {
+                font-size: 1.6rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    article#patroni {
+        position: absolute;
+            top: 278rem;
+            left: 10%;
+        width: 80%;
+        div.mobile_only {
+            display: none;
+        }
+        
+        img.desktop_only_patron {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    article#recenzje {
+        width: 100%;
+        position: absolute;
+        top: 294rem;
+        left: 0;
+        
+        section {
+            
+            position: relative;
+            
+            div.review_about {
+            
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                h4 {
+                    position: absolute;
+                    top: 0;
+                    left: 16%;
+                }
+
+                h5 {
+
+                }
+            }
+        
+            div.review_txt {
+                padding: 2%;
+                font-size: 2rem;
+            }
+        }
+    }    
 }
+
 
 @media (min-width: 768px) and (orientation: portrait) {
     article#o_ksiazce {
@@ -517,7 +765,7 @@ article#recenzje {
 @media (min-width: 1024px) {
     
     main {
-        min-height: 300vh;
+        min-height: 700vh;
         width: 100%;
         background-color: #fefefe;
         margin-top: 100vh;
@@ -559,7 +807,7 @@ article#recenzje {
     
     article#opcje_zakupu {
         position: absolute;
-        top: 24%;
+        top: 14%;
         left: 3%;
         width: 48%;
         height: 150vh;
@@ -602,32 +850,206 @@ article#recenzje {
         display: block;
         position: absolute;
         right: 5%;
-        top: 40%;
+        top: 26%;
         width: 45%;
-        height: auto;
-        img {
-            border: 2px solid $rosy_color;
-            padding: 2%;
+        height: 60rem;
+        border: 2px solid $rosy_color;
+        
+        ul {
+            position: absolute;
+            top: 3%;
+            width: 80%;
+            height: 60rem;
+            right: 5%;
+            li {
+                img {
+                    
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                }
+                list-style-type: none;
+                position: absolute;
+                top: 0;
+                padding: 2%;
+                opacity: 0;
+                text-align: center;
+                font-size: 1.8rem;
+                transition: 1s opacity; 
+                margin: 2%;   
+            }
+            .active {
+                opacity: 1;
+            }
         }
         
     }
 
-article#o_autorce {
-    display: none;
+    article#o_autorce {
+        position: absolute;
+        top: 44%;
+        left: 2%;
+        width: 90%;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        h3 {
+            width: 30%;
+            position: absolute;
+            top: 5%;
+            left: 6%;
+        }
+
+        img.author_pict {
+            display: block;
+            width: 65%;
+            height: auto;
+            margin: {
+                left: auto;
+                right: 2%;
+                bottom: 3%;
+            }
+        }
+
+        h4 {
+            font-size: 3rem;
+            position: absolute;
+            top: 15%;
+            left: 6%;
+           
+        }
+
+        div {
+            margin-bottom: 1%;
+            padding: 1%;
+            
+        }
+    }
+
+    article#opcja_ksiazka_autograf {
+        position: absolute;
+        top: 58%;
+        left: 2%;
+        width: 90%;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 5%;
+        }
+        padding-top: 1%;
+
+        h4 {
+            font-size: 3rem;
+            margin-bottom: 4%;
+        }
+
+        section {
+            border: 2px solid $rosy_color;
+            padding: 2%;
+
+            div {
+                padding: 0;
+            }
+            
+            a:hover {
+                background-color: $btn_bckg;
+                color: #fefefe;
+            }
+            
+            button.btn_option {
+                font-size: 2rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    article#patroni {
+        min-height: 50vh;
+        position: absolute;
+        top: 72%;
+        left: 2%;
+        width: 90%;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 5%;
+        }
+        padding-top: 1%;
+
+        h3 {
+            width: 20%;
+            height: 10rem;
+            display: inline-block;
+            font-size: 2rem;
+            padding: {
+                top: auto;
+                bottom: auto;
+                left: 2%;
+            }
+            margin-top: 2%;
+        }
+
+        ul {
+            position: absolute;
+            top: 0%;
+            width: 80%;
+            height: 10rem;
+            left: 29%;
+
+            li {
+
+                img {
+                    max-height: 8rem;
+                }
+
+                width: 20%;
+                height: 10rem;
+                display: inline-block;
+                position: relative;
+                padding-top: 0;
+                opacity: 1;   
+            }
+        }
+    }
+
+    article#recenzje {
+        width: 100%;
+        position: absolute;
+        top: 78%;
+        left: 0;
+        
+        section {
+            
+            position: relative;
+            
+            div.review_about {
+            
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                h4 {
+                    position: absolute;
+                    top: 0;
+                    left: 16%;
+                }
+
+                h5 {
+
+                }
+            }
+        
+            div.review_txt {
+                padding: 2%;
+                font-size: 2rem;
+            }
+        }
+        
+}
 }
 
-article#opcja_ksiazka_autograf {
-    display: none;
-}
-
-article#patroni {
-    display: none;
-}
-
-article#recenzje {
-    display: none;
-}
-}
 
 @media (min-width: 1024px) and (orientation: portrait) {
     //tutaj
