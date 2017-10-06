@@ -7,19 +7,19 @@ $("#arrow").on("click", function() {
 /* slider - inspiration: Julien Lejeune - https://codepen.io/jlnljn/pen/qRxqzR?editors=0010 */
 
 let timer = 4000;
-
 let i = 0;
-const max = $('#carousel > li').length;
+
+const max = $('#carousel_patron > li').length;
  
-	$("#carousel > li").eq(i).addClass('active');
+	$("#carousel_patron > li").eq(i).addClass('active');
         //.css('left','2%');
 	   //$("#c > li").eq(i + 1).addClass('active').css('left','62%');
  
 	setInterval(function(){ 
 
-		$("#carousel > li").removeClass('active');
+		$("#carousel_patron > li").removeClass('active');
 
-		$("#carousel > li").eq(i).css('transition-delay','0.25s');
+		$("#carousel_patron > li").eq(i).css('transition-delay','0.25s');
 		//$("#c > li").eq(i + 1).css('transition-delay','0.5s');
 
 		if (i < max-1) {
@@ -29,8 +29,26 @@ const max = $('#carousel > li').length;
 			i = 0; 
 		}  
 
-		$("#carousel > li").eq(i).addClass('active').css('transition-delay','1.25s');
+		$("#carousel_patron > li").eq(i).addClass('active').css('transition-delay','0.25s');
 		//$("#c > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
 		//$("#c > li").eq(i + 1).css('left','50%').addClass('active').css('transition-delay','1.5s');
 	
 	}, timer);
+
+let j = 0;
+const max_cover = $('#carousel_cover > li').length;
+ 
+$("#carousel_cover > li").eq(j).addClass('active');
+ 
+setInterval(function(){ 
+
+    $("#carousel_cover > li").removeClass('active');
+    $("#carousel_cover > li").eq(j).css('transition-delay','0.25s');
+    if (j < max_cover-1) {
+        j = j+1; 
+    } else { 
+        j = 0; 
+    }  
+    $("#carousel_cover > li").eq(i).addClass('active').css('transition-delay','0.25s');	
+	
+}, timer);
