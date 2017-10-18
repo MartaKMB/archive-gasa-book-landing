@@ -314,6 +314,7 @@ article {
         .review_about {
 
             color: $dark_olive;
+            height: auto;
 
             img {
                 width: 8rem;
@@ -326,9 +327,8 @@ article {
 
             h4 {
                 text-align: center;
-                padding: 2%;
                 margin: {
-                    top: 6%;
+                    top: 2%;
                     left: 4%;
                     bottom: 2%;
                 }
@@ -338,7 +338,7 @@ article {
             h5 {
                 font-size: 1.6rem;
                 margin: {
-                    top: 6%;
+                    top: 2%;
                     left: 4%;
                     bottom: 2%;
                 }
@@ -452,7 +452,7 @@ article {
         height: auto;
             width: auto;
         grid-column: 2;
-        grid-row: 1 / 5;
+        grid-row: 1 / 9;
         
         .title_about_book {
         height: 8rem;
@@ -475,7 +475,7 @@ article {
             width: auto;
         margin: 4%;
         grid-column: 1;
-        grid-row: 2 / 6;
+        grid-row: 6 / 20;
 
         .title_option {
             font-size: 2rem;
@@ -565,7 +565,7 @@ article {
     .article_o_autorce {
         position: relative;
         height: auto;
-            width: auto;
+        width: auto;
         
         grid-column: 1 / 3;
         grid-row: 20 / 24;
@@ -606,7 +606,7 @@ article {
     .article_opcja_ksiazka_autograf {
         position: relative;
         height: auto;
-            width: auto;
+        width: auto;
         grid-column: 1 / 3;
         grid-row: 25 / 28;
 
@@ -680,123 +680,53 @@ article {
 }
 
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) and (orientation: portrait) {}
 
-    .article_o_ksiazce {
-        aside {
-            margin-top: 10%;
-        }
+
+@media (min-width: 1024px) {
+    main {
+        height: 500rem;
+        
+    }
+    
+    .content_wrapper {
+        
+        width: 900px;
+        margin: auto;
+        padding-top: 2.5rem;
     }
 
     .article_opcje_zakupu {
-        top: 42rem;
-        height: 130rem;
-        .title_option {
-            padding: 2%;
-            height: 6rem;
+    
+        grid-row: 5 / 21;
+        
+        section {
+            font-size: 2.4rem;
         }
+        
+    }
+    
+    .article_o_autorce {
+
+        grid-row: 21 / 28;
+    }
+    
+    .article_opcja_ksiazka_autograf {
+        grid-row: 27 / 28;
     }
 
-}
+    .article_patroni {
+        grid-row: 32;
+        
+    }
 
-@media (min-width: 1024px) {
-
-//    main {
-//        height: 560rem;
-//
-//        .content_wrapper {
-//            positon: relative;
-//            width: 1000px;
-//            margin: {
-//                left: auto;
-//                right: auto;
-//            }
-//
-//            .article_opcje_zakupu {
-//                top: 70rem;
-//                height: 152rem;
-//
-//                .title_option {
-//                    padding: 2%;
-//                    height: 8rem;
-//                    font-size: 2.4rem;
-//                }
-//
-//                section {
-//                    font-size: 1.8rem;
-//                    div {
-//                        margin-top: 3%;
-//                        padding: 1.6%;
-//                    }
-//                    .options_num {
-//                        height: 50px;
-//                        width: 50px;
-//                        font-size: 4rem;
-//                        padding: 2%;
-//                    }
-//                    h4 {
-//                        font-size: 2.4rem;
-//                    }
-//                }
-//            }
-//
-//            .desktop_only_book_options {
-//                top: 100rem;
-//                height: 80rem;
-//            }
-//
-//            .article_o_autorce {
-//                top: 220rem;
-//                div {
-//                    margin-bottom: 0;
-//                }
-//            }
-//
-//            .article_opcja_ksiazka_autograf {
-//                top: 290rem;
-//            }
-//
-//            .article_patroni {
-//                top: 360rem;
-//            }
-//
-//            .article_recenzje {
-//                top: 400rem;
-//
-//                .review {
-//
-//                    .review_about {
-//
-//
-//                        h4 {
-//
-//                            padding: 1%;
-//                            margin: {
-//                                top: 2%;
-//                                bottom: 2%;
-//                            }
-//                            font-size: 3rem;
-//                        }
-//
-//                        h5 {
-//                            font-size: 1.8rem;
-//                            margin: {
-//                                top: 2%;
-//                                bottom: 2%;
-//                            }
-//
-//                        }
-//                    }
-//
-//                    .review_txt {
-//                        font-size: 2.2rem;
-//
-//                    }
-//
-//                }
-//            }
-//        }
-//    }
+    .article_recenzje {
+        
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 

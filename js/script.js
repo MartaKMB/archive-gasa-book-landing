@@ -52,3 +52,17 @@ setInterval(function(){
     $("#carousel_cover > li").eq(i).addClass('active').css('transition-delay','0.25s');	
 	
 }, timer);
+
+/* button buy autographed book pop up */
+
+$("#btn_option_aut").click(function(){
+    $("#buy_autographed_book").css('display', 'block');
+});
+
+$("#btn_option_aut_2").click(function(){
+    $("#buy_autographed_book").css('display', 'block');
+});
+
+$("#close_buy").click(function(){
+    $("#buy_autographed_book").css('display', 'none');
+});
