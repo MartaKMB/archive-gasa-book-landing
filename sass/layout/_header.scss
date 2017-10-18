@@ -11,14 +11,14 @@ header {
     z-index: 1;
 }
 
-div.header_top {
+.header_top {
     height: 8%;
     width: 100%;
     background-color: #fefefe;
     padding: 1.2% 2.8%;
     position: relative;
     
-    #logo {
+    .logo {
         height: 100%;
         width: auto;
     }
@@ -39,7 +39,7 @@ div.header_top {
     }
 }
 
-div.header_img {
+.header_img {
     background: {
         image: url(../img/header_book_cover.jpg);
         repeat: no-repeat;
@@ -103,7 +103,7 @@ div.header_img {
 
 @media (orientation: landscape) {
     
-    div.header_top {
+    .header_top {
         height: 12%;
         width: 100%;
         background-color: #fefefe;
@@ -115,7 +115,7 @@ div.header_img {
         }
     }
     
-    div.header_img {
+    .header_img {
         background-position: 2%;
         padding: 1.8%;
 
@@ -139,7 +139,7 @@ div.header_img {
 @media (min-width: 530px) {}
 
 @media (min-width: 768px) {
-    div.header_img {
+    .header_img {
         h1 {
             font-size: 5rem;
             width: 35%;
@@ -159,13 +159,13 @@ div.header_img {
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-    div.header_top {
+    .header_top {
         address {
             font-size: 2.6rem;
         }
     }
 
-    div.header_img {
+    .header_img {
         h1 {
             font-size: 5.8rem;
             width: 65%;
@@ -186,13 +186,13 @@ div.header_img {
 @media (min-width: 1024px) {}
 
 @media (min-width: 1024px) and (orientation: portrait) {
-    div.header_top {
+    .header_top {
         address {
             font-size: 3.4rem;
         }
     }
 
-    div.header_img {
+    .header_img {
         h1 {
             font-size: 6.8rem;
             width: 65%;

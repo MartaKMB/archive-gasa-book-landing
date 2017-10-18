@@ -12,7 +12,7 @@ button {
 
 /* header */
 
-button.btn_buy {
+.btn_buy {
     width: 12rem;
     height: 4rem;
     position: relative;
@@ -50,7 +50,7 @@ button.btn_buy {
     }
 }
 
-#arrow {
+.btn_arrow {
     color: #fefefe;
     width: 40px;
     height: 40px;
@@ -78,7 +78,7 @@ button.btn_buy {
 
 /* article */
 
-button.btn_option {
+.btn_option {
     width: 75%;
     height: 4.4rem;
     font: {
@@ -106,19 +106,19 @@ button.btn_option {
 
 @media (orientation: landscape) {
     
-    button.btn_buy {
+    .btn_buy {
         margin: {
             top: 3.8%;
             left: 75%;
         }
     }
 
-    #arrow {
+    .btn_arrow {
         bottom: 11.2%;
         left: 5.5%;
     }
     
-    button.btn_option {
+    .btn_option {
         height: 5rem;
         font-size: 1.4rem;
         margin-top: 8%;
@@ -128,7 +128,7 @@ button.btn_option {
 @media (min-width: 530px) {}
 
 @media (min-width: 768px) {
-    button.btn_buy {
+    .btn_buy {
         width: 18rem;
         height: 4.6rem;
         font-size: 2rem;
@@ -137,7 +137,7 @@ button.btn_option {
             left: 2.8%;
         }
     }
-    #arrow {
+    .btn_arrow {
         width: 60px;
         height: 60px;
         font-size: 5rem;
@@ -146,7 +146,7 @@ button.btn_option {
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
-    button.btn_buy {
+    .btn_buy {
         width: 22rem;
         height: 8rem;
         font-size: 2.4rem;
@@ -164,7 +164,7 @@ button.btn_option {
             }
         }
     }
-    #arrow {
+    .btn_arrow {
         width: 60px;
         height: 60px;
         left: 17.5%;
@@ -173,14 +173,14 @@ button.btn_option {
             cursor: pointer;
         }
     }
-    button.btn_option {
+    .btn_option {
         height: 5rem;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 }
 
 @media (min-width: 1024px) {
-    button.btn_option {
+    .btn_option {
         width: 80%;
         height: 3rem;
         font: {
@@ -200,7 +200,7 @@ button.btn_option {
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-    button.btn_buy {
+    .btn_buy {
         width: 24rem;
         height: 8rem;
         font-size: 3.2rem;
@@ -209,7 +209,7 @@ button.btn_option {
             left: 17.5%;
         }
     }
-    #arrow {
+    .btn_arrow {
         width: 80px;
         height: 80px;
         left: 17.5%;
