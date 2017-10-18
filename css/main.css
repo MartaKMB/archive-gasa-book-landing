@@ -30,8 +30,9 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 
 /* header */
 .btn_buy { width: 12rem; height: 4rem; position: relative; z-index: 1; font-size: 1.6rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; }
+.btn_buy .up { font-size: 1.2rem; }
 .btn_buy::before { content: ""; position: absolute; top: 0; left: 0; background-color: #cf1e25; opacity: .8; display: block; width: inherit; height: inherit; z-index: -1; transform: translate(3px, 3px); transition: .8s ease; }
-.btn_buy:hover::before { transform: translate(-3px, -3px); }
+.btn_buy:hover::before { transform: translate(-3px, -3px); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
 
 .btn_arrow { color: #fefefe; width: 40px; height: 40px; border: 2px solid #fefefe; position: absolute; bottom: 2.8%; left: 12.5%; border-radius: 50%; font-size: 3rem; text-align: center; text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe; overflow: hidden; transition: .8s ease; }
 .btn_arrow:hover { border-color: #cf1e25; background-color: #cf1e25; opacity: .8; }
@@ -107,7 +108,7 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
 .article_opcje_zakupu .title_option { background-color: inherit; }
 .article_opcje_zakupu section { border: 2px solid #fefefe; margin-top: 6%; margin-bottom: 4%; padding: 3%; position: relative; }
 .article_opcje_zakupu section div { margin-top: 4%; }
-.article_opcje_zakupu section .options_num { border: 2px solid #fefefe; height: 40px; width: 40px; border-radius: 50%; text-align: center; font-size: 3rem; font-weight: 600; padding: 2%; background-color: #B5AA8B; position: absolute; top: -25px; leftt: 2%; z-index: 1; }
+.article_opcje_zakupu section .options_num { border: 2px solid #fefefe; height: 40px; width: 40px; border-radius: 50%; text-align: center; font-size: 3rem; font-weight: 600; padding: 2%; background-color: #B5AA8B; position: absolute; top: -25px; left: 2%; z-index: 1; }
 .article_opcje_zakupu section h4 { text-align: center; padding: 2%; margin-top: 4%; font-size: 2rem; }
 .article_opcje_zakupu section .important_txt { font-weight: 600; background-color: #cf1e25; padding: .8%; }
 .article_opcje_zakupu section .up { font-size: 1.2rem; }
@@ -190,7 +191,7 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
   .article_recenzje section { position: relative; }
   .article_recenzje section .review_about img { width: 10rem; height: 10rem; }
   .article_recenzje section .review_txt { padding: 2%; font-size: 2rem; } }
-@media (min-width: 1024px) { main { height: 500rem; }
+@media (min-width: 1024px) { main { height: 470rem; }
   .content_wrapper { width: 900px; margin: auto; padding-top: 2.5rem; }
   .article_opcje_zakupu { grid-row: 5 / 21; }
   .article_opcje_zakupu section { font-size: 2.4rem; }

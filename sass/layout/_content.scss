@@ -24,7 +24,7 @@ article {
     width: 100%;
     background-color: #fefefe;
     position: relative;
-    margin-top: 0; //z-index: 2;
+    margin-top: 0; 
     padding: 4%;
 
     .title_about_book {
@@ -52,6 +52,7 @@ article {
 
     .about_gasa {
         font-size: 1.6rem;
+        
         .introduction {
             font-weight: 600;
             color: $about_title_bckg;
@@ -141,7 +142,7 @@ article {
             background-color: $rosy_color;
             position: absolute;
             top: -25px;
-            leftt: 2%;
+            left: 2%;
             z-index: 1;
         }
 
@@ -243,6 +244,7 @@ article {
 
         div {
             padding: 2%;
+            
             .important_txt {
                 background-color: $btn_bckg;
                 color: #fefefe;
@@ -270,7 +272,7 @@ article {
         left: 50%;
 
         li {
-
+            
             img {
                 width: auto;
                 max-width: 100%;
@@ -312,7 +314,6 @@ article {
         background-color: #fefefe;
 
         .review_about {
-
             color: $dark_olive;
             height: auto;
 
@@ -423,12 +424,10 @@ article {
     }
     
     .content_wrapper {
-        
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(45, 10rem);
         grid-gap: 2%;
-        
         .desktop_only_pict {
             display: block;
             height: auto;
@@ -439,36 +438,29 @@ article {
             } 
             grid-column: 1;
             grid-row: 1;
-
             img {
                 width: 100%;
                 height: auto;
             }
         }
     }
-
     .article_o_ksiazce {
         position: relative;
         height: auto;
             width: auto;
         grid-column: 2;
         grid-row: 1 / 9;
-        
         .title_about_book {
         height: 8rem;
         }
-
         section {
             padding: 1%;
             font-size: 2rem;
-
         }
-
         .about_gasa {
             font-size: 1.8rem;
         }
     }
-
     .article_opcje_zakupu {
         position: relative;
         height: auto;
@@ -476,22 +468,18 @@ article {
         margin: 4%;
         grid-column: 1;
         grid-row: 6 / 20;
-
         .title_option {
             font-size: 2rem;
             padding: 1%;
             height: 6rem;
         }
-
         section {
             font-size: 1.6rem;
             margin-top: 2.2%;
-
             div {
                 margin-top: 4%;
                 padding-left: 2%;
             }
-
             .options_num {
                 height: 40px;
                 width: 40px;
@@ -504,24 +492,19 @@ article {
                 font-size: 2rem;
                 padding-top: 3%;
             }
-
             a:hover {
                 background-color: $btn_bckg;
             }
         }
     }
-
     .desktop_only_book_options {
         display: block;
         height: auto;
             width: auto;
         grid-column: 2;
         grid-row:  12 / 14 ;
-        position: relative;
-        
-        
-        ul {
-            
+        position: relative;      
+        ul {         
             position: absolute;
             top: .5rem;
             width: 80%;
@@ -532,8 +515,7 @@ article {
                     width: auto;
                     max-width: 100%;
                     height: auto;
-                    max-width: 75%;
-                    
+                    max-width: 75%;               
                 }
                 border: 2px solid $rosy_color;
                 border-left: none;
@@ -550,7 +532,6 @@ article {
                     right: 2%;
                     left: -5rem;
                 } 
-                
                 p {
                     padding-top: 5%;
                 }
@@ -559,24 +540,19 @@ article {
                 opacity: 1;
             }
         }
-
     }
-
     .article_o_autorce {
         position: relative;
         height: auto;
-        width: auto;
-        
+        width: auto;    
         grid-column: 1 / 3;
         grid-row: 20 / 24;
-
         h3 {
             width: 40%;
             position: absolute;
             top: 4rem;
             left: 3rem;
         }
-
         .author_pict {
             display: block;
             width: 65%;
@@ -587,54 +563,43 @@ article {
                 bottom: 3%;
             }
         }
-
         h4 {
             font-size: 2.6rem;
             position: absolute;
             top: 8rem;
             left: 4rem;
-
         }
-
         div {
             margin-bottom: 1%;
             padding: 1%;
-
         }
     }
-
     .article_opcja_ksiazka_autograf {
         position: relative;
         height: auto;
         width: auto;
         grid-column: 1 / 3;
         grid-row: 25 / 28;
-
         h4 {
             font-size: 2.4rem;
             margin-bottom: 4%;
         }
-
         section {
             border: 2px solid $rosy_color;
             padding: 2%;
-
             div {
                 padding: 0;
             }
-
             a:hover {
                 background-color: $btn_bckg;
                 color: #fefefe;
             }
-
             .btn_option {
                 font-size: 1.6rem;
                 height: 4rem;
             }
         }
     }
-
     .article_patroni {
         position: relative;
         height: auto;
@@ -644,33 +609,26 @@ article {
         .mobile_only {
             display: none;
         }
-
         .desktop_only_patron {
             display: block;
             width: 100%;
             height: auto;
         }
     }
-
     .article_recenzje {
         position: relative;
         height: auto;
         width: auto;
         grid-column: 1 / 3;
         grid-row: 32 / 46;
-
         section {
-
             position: relative;
-
             .review_about {
-
                 img {
                     width: 10rem;
                     height: 10rem;
                 }
             }
-
             .review_txt {
                 padding: 2%;
                 font-size: 2rem;
@@ -685,50 +643,35 @@ article {
 
 @media (min-width: 1024px) {
     main {
-        height: 500rem;
-        
+        height: 470rem;   
     }
-    
     .content_wrapper {
-        
         width: 900px;
         margin: auto;
         padding-top: 2.5rem;
     }
-
     .article_opcje_zakupu {
-    
         grid-row: 5 / 21;
-        
         section {
             font-size: 2.4rem;
-        }
-        
+        }  
     }
-    
     .article_o_autorce {
-
         grid-row: 21 / 28;
     }
-    
     .article_opcja_ksiazka_autograf {
         grid-row: 27 / 28;
     }
-
     .article_patroni {
-        grid-row: 32;
-        
+        grid-row: 32;   
     }
-
-    .article_recenzje {
-        
+    .article_recenzje {   
         width: 100vw;
         position: absolute;
         bottom: 0;
         left: 0;
     }
 }
-
 
 @media (min-width: 1024px) and (orientation: portrait) {}
 
