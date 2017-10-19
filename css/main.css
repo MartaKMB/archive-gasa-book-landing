@@ -1,4 +1,4 @@
-* { padding: 0; margin: 0; box-sizing: border-box; }
+* { padding: 0; margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html { font-size: 10px; }
 
@@ -7,9 +7,12 @@ body { overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 
 /* header */
-@keyframes arrow { 0% { transform: translateY(-80px); }
-  50% { transform: translateY(0px); }
-  100% { transform: translateY(80px); } }
+@-webkit-keyframes arrow { 0% { -webkit-transform: translateY(-80px); transform: translateY(-80px); }
+  50% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+  100% { -webkit-transform: translateY(80px); transform: translateY(80px); } }
+@keyframes arrow { 0% { -webkit-transform: translateY(-80px); transform: translateY(-80px); }
+  50% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+  100% { -webkit-transform: translateY(80px); transform: translateY(80px); } }
 /* article about book */
 /* article about options */
 span.up { vertical-align: super; }
@@ -18,28 +21,28 @@ span.up { vertical-align: super; }
 button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; color: #FFFFFF; margin: 1rem; display: block; font-family: "Gruppo", cursive; letter-spacing: .4rem; text-align: center; }
 
 /* pop up - buy book with autograph */
-.buy_autographed_book { display: none; position: fixed; top: 15%; left: 10%; width: 80%; z-index: 2; font-family: "Gruppo", cursive; letter-spacing: .4rem; text-align: center; padding: 4%; font-size: 1.5rem; background-color: #fefefe; box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
+.buy_autographed_book { display: none; position: fixed; top: 15%; left: 10%; width: 80%; z-index: 2; font-family: "Gruppo", cursive; letter-spacing: .4rem; text-align: center; padding: 4%; font-size: 1.5rem; background-color: #fefefe; -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
 .buy_autographed_book i { position: absolute; top: 4%; right: 2%; }
 .buy_autographed_book i:hover { color: #cf1e25; }
 .buy_autographed_book h3 { padding: .4rem; font-size: 1.8rem; }
 .buy_autographed_book address { font-style: normal; margin-top: 1rem; font-size: 2rem; padding: .6rem; }
 .buy_autographed_book address .important_txt:hover { font-weight: 600; background-color: #cf1e25; color: #fefefe; padding: .8%; }
 .buy_autographed_book address::after { content: ''; display: block; border-top: 2px solid #434F34; margin-top: 2.8%; margin-bottom: 2.8%; clear: both; }
-.buy_autographed_book img { border-radius: 50%; width: 10rem; height: 10rem; margin-left: 4%; margin-bottom: 2%; box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); float: left; }
+.buy_autographed_book img { border-radius: 50%; width: 10rem; height: 10rem; margin-left: 4%; margin-bottom: 2%; -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); float: left; }
 .buy_autographed_book p { line-height: 1.6rem; margin: .6rem; }
 
 /* header */
 .btn_buy { width: 12rem; height: 4rem; position: relative; z-index: 1; font-size: 1.6rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; }
 .btn_buy .up { font-size: 1.2rem; }
-.btn_buy::before { content: ""; position: absolute; top: 0; left: 0; background-color: #cf1e25; opacity: .8; display: block; width: inherit; height: inherit; z-index: -1; transform: translate(3px, 3px); transition: .8s ease; }
-.btn_buy:hover::before { transform: translate(-3px, -3px); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
+.btn_buy::before { content: ""; position: absolute; top: 0; left: 0; background-color: #cf1e25; opacity: .8; display: block; width: inherit; height: inherit; z-index: -1; -webkit-transform: translate(3px, 3px); transform: translate(3px, 3px); -webkit-transition: .8s ease; transition: .8s ease; }
+.btn_buy:hover::before { -webkit-transform: translate(-3px, -3px); transform: translate(-3px, -3px); -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
 
-.btn_arrow { color: #fefefe; width: 40px; height: 40px; border: 2px solid #fefefe; position: absolute; bottom: 2.8%; left: 12.5%; border-radius: 50%; font-size: 3rem; text-align: center; text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe; overflow: hidden; transition: .8s ease; }
+.btn_arrow { color: #fefefe; width: 40px; height: 40px; border: 2px solid #fefefe; position: absolute; bottom: 2.8%; left: 12.5%; border-radius: 50%; font-size: 3rem; text-align: center; text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe; overflow: hidden; -webkit-transition: .8s ease; transition: .8s ease; }
 .btn_arrow:hover { border-color: #cf1e25; background-color: #cf1e25; opacity: .8; }
-.btn_arrow .fa-angle-down { animation: arrow 1.4s infinite linear; }
+.btn_arrow .fa-angle-down { -webkit-animation: arrow 1.4s infinite linear; animation: arrow 1.4s infinite linear; }
 
 /* article */
-.btn_option { width: 75%; height: 4.4rem; font-size: 1.1rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; padding: 1%; background-color: #fefefe; border-color: #cf1e25; color: #cf1e25; box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
+.btn_option { width: 75%; height: 4.4rem; font-size: 1.1rem; font-weight: 600; margin-top: 7.5%; margin-left: 12.5%; text-align: center; padding: 1%; background-color: #fefefe; border-color: #cf1e25; color: #cf1e25; -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
 .btn_option:hover { background-color: #cf1e25; color: #fefefe; }
 
 /* media queries */
@@ -49,9 +52,9 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 @media (min-width: 768px) { .btn_buy { width: 18rem; height: 4.6rem; font-size: 2rem; margin-top: 4.5%; margin-left: 2.8%; }
   .btn_arrow { width: 60px; height: 60px; font-size: 5rem; left: 88%; } }
 @media (min-width: 768px) and (orientation: portrait) { .btn_buy { width: 22rem; height: 8rem; font-size: 2.4rem; margin-top: 8.5%; margin-left: 17.5%; }
-  .btn_buy::before { transform: translate(5px, 5px); }
+  .btn_buy::before { -webkit-transform: translate(5px, 5px); transform: translate(5px, 5px); }
   .btn_buy:hover { cursor: pointer; }
-  .btn_buy:hover::before { transform: translate(-5px, -5px); }
+  .btn_buy:hover::before { -webkit-transform: translate(-5px, -5px); transform: translate(-5px, -5px); }
   .btn_arrow { width: 60px; height: 60px; left: 17.5%; font-size: 5rem; }
   .btn_arrow:hover { cursor: pointer; }
   .btn_option { height: 5rem; font-size: 1.4rem; } }
@@ -61,9 +64,9 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
 
 .header_top { height: 8%; width: 100%; background-color: #fefefe; padding: 1.2% 2.8%; position: relative; }
 .header_top .logo { height: 100%; width: auto; }
-.header_top address { color: #121111; font-size: 1.4rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; transform: translateY(-50%); }
+.header_top address { color: #121111; font-size: 1.4rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-.header_img { background-image: url(../img/header_book_cover.jpg); background-repeat: no-repeat; background-size: cover; background-position: 31%; height: 92%; position: relative; padding: 3.2%; box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); }
+.header_img { background-image: url(../img/header_book_cover.jpg); background-repeat: no-repeat; background-size: cover; background-position: 31%; height: 92%; position: relative; padding: 3.2%; -webkit-box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); }
 .header_img h1 { font-size: 3rem; width: 75%; margin-left: auto; margin-right: auto; text-align: center; }
 .header_img h1::before, .header_img h1::after { content: ''; display: block; border-top: 2px solid rgba(255, 255, 255, 0.44); margin-top: 2.8%; margin-bottom: 2.8%; }
 .header_img h1 span::after { content: '\A'; white-space: pre; }
@@ -89,7 +92,7 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
   .header_img h2:first-child { font-size: 3.6rem; } }
 main { min-height: 100vh; width: 100%; background-color: #fefefe; position: relative; margin-top: 100vh; z-index: 2; }
 
-article { font-family: "Gruppo", cursive; display: flex; flex-direction: column; }
+article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 .desktop_only_pict, .desktop_only_book_options, .desktop_only_patron { display: none; }
 
@@ -129,8 +132,8 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
 .article_opcja_ksiazka_autograf section div .important_txt { background-color: #cf1e25; color: #fefefe; }
 
 .article_patroni { min-height: 50vh; position: relative; color: black; margin-top: 0; }
-.article_patroni ul { position: absolute; top: 25%; width: 80%; height: 20rem; left: 50%; }
-.article_patroni ul li { width: 100%; list-style-type: none; position: absolute; top: 0; padding: 2%; height: 20rem; opacity: 0; text-align: center; font-size: 1.8rem; transform: translateX(-50%); transition: 1s opacity; margin: 2%; }
+.article_patroni ul { position: absolute; margin-top: 1rem; top: 25%; width: 80%; height: 20rem; left: 50%; }
+.article_patroni ul li { width: 100%; list-style-type: none; position: absolute; top: 0; padding: 2%; height: 20rem; opacity: 0; text-align: center; font-size: 1.8rem; -webkit-transform: translateX(-50%); transform: translateX(-50%); -webkit-transition: 1s opacity; transition: 1s opacity; margin: 2%; }
 .article_patroni ul li img { width: auto; max-width: 100%; height: auto; max-height: 10rem; }
 .article_patroni ul .active { opacity: 1; }
 
@@ -138,7 +141,7 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
 .article_recenzje h3 { background-color: #434F34; }
 .article_recenzje .review { background-color: #fefefe; }
 .article_recenzje .review .review_about { color: #434F34; height: auto; }
-.article_recenzje .review .review_about img { width: 8rem; height: 8rem; border-radius: 50%; margin: 3%; box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); float: left; }
+.article_recenzje .review .review_about img { width: 8rem; height: 8rem; border-radius: 50%; margin: 3%; -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); float: left; }
 .article_recenzje .review .review_about h4 { text-align: center; margin-top: 2%; margin-left: 4%; margin-bottom: 2%; font-size: 2rem; }
 .article_recenzje .review .review_about h5 { font-size: 1.6rem; margin-top: 2%; margin-left: 4%; margin-bottom: 2%; }
 .article_recenzje .review .review_txt { padding: 2%; font-size: 2rem; clear: both; }
@@ -169,7 +172,7 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
   .article_opcje_zakupu section a:hover { background-color: #cf1e25; }
   .desktop_only_book_options { display: block; height: auto; width: auto; grid-column: 2; grid-row: 12/14; position: relative; }
   .desktop_only_book_options ul { position: absolute; top: .5rem; width: 80%; height: inherit; right: 5%; }
-  .desktop_only_book_options ul li { border: 2px solid #B5AA8B; border-left: none; width: 100%; min-height: 45rem; list-style-type: none; position: absolute; top: 0; opacity: 0; text-align: center; font-size: 1.8rem; transition: 1s opacity; margin-right: 2%; margin-left: -5rem; }
+  .desktop_only_book_options ul li { border: 2px solid #B5AA8B; border-left: none; width: 100%; min-height: 45rem; list-style-type: none; position: absolute; top: 0; opacity: 0; text-align: center; font-size: 1.8rem; -webkit-transition: 1s opacity; transition: 1s opacity; margin-right: 2%; margin-left: -5rem; }
   .desktop_only_book_options ul li img { width: auto; max-width: 100%; height: auto; max-width: 75%; }
   .desktop_only_book_options ul li p { padding-top: 5%; }
   .desktop_only_book_options ul .active { opacity: 1; }
@@ -178,16 +181,16 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
   .article_o_autorce .author_pict { display: block; width: 65%; height: auto; margin-left: auto; margin-right: 2%; margin-bottom: 3%; }
   .article_o_autorce h4 { font-size: 2.6rem; position: absolute; top: 8rem; left: 4rem; }
   .article_o_autorce div { margin-bottom: 1%; padding: 1%; }
-  .article_opcja_ksiazka_autograf { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 25 / 28; }
+  .article_opcja_ksiazka_autograf { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 26 / 29; }
   .article_opcja_ksiazka_autograf h4 { font-size: 2.4rem; margin-bottom: 4%; }
   .article_opcja_ksiazka_autograf section { border: 2px solid #B5AA8B; padding: 2%; }
   .article_opcja_ksiazka_autograf section div { padding: 0; }
   .article_opcja_ksiazka_autograf section a:hover { background-color: #cf1e25; color: #fefefe; }
   .article_opcja_ksiazka_autograf section .btn_option { font-size: 1.6rem; height: 4rem; }
-  .article_patroni { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 30 / 31; }
+  .article_patroni { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 32; }
   .article_patroni .mobile_only { display: none; }
   .article_patroni .desktop_only_patron { display: block; width: 100%; height: auto; }
-  .article_recenzje { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 32 / 46; }
+  .article_recenzje { position: relative; height: auto; width: auto; grid-column: 1 / 3; grid-row: 35 / 46; }
   .article_recenzje section { position: relative; }
   .article_recenzje section .review_about img { width: 10rem; height: 10rem; }
   .article_recenzje section .review_txt { padding: 2%; font-size: 2rem; } }
@@ -199,6 +202,7 @@ article { font-family: "Gruppo", cursive; display: flex; flex-direction: column;
   .article_opcja_ksiazka_autograf { grid-row: 27 / 28; }
   .article_patroni { grid-row: 32; }
   .article_recenzje { width: 100vw; position: absolute; bottom: 0; left: 0; } }
+@media (min-width: 1280px) { main { height: 500rem; } }
 footer { min-height: 5vh; background-color: #fefefe; margin-top: 0; margin-bottom: 0; position: relative; z-index: 2; padding: 4%; font-family: "Gruppo", cursive; text-align: center; }
 footer address { font-size: 2.2rem; font-style: normal; font-weight: 600; margin-bottom: 2%; }
 footer div#signature { font-size: 1.2rem; }

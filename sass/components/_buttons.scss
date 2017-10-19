@@ -27,6 +27,7 @@ button {
     padding: 4%;
     font-size: 1.5rem;
     background-color: #fefefe;
+    -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
     box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
     
     
@@ -85,6 +86,7 @@ button {
             left: 4%;
             bottom: 2%;
         } 
+        -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); 
         box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
         float: left;
     }
@@ -129,13 +131,17 @@ button {
         width: inherit;
         height: inherit;
         z-index: -1;
+        -webkit-transform: translate(3px, 3px);
         transform: translate(3px, 3px);
+        -webkit-transition: .8s ease;
         transition: .8s ease;
     }
     
     &:hover {
         &::before {
+            -webkit-transform: translate(-3px, -3px);
             transform: translate(-3px, -3px);
+            -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
             box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
         }
     }
@@ -154,6 +160,7 @@ button {
     text-align: center;
     text-shadow: 0px -15px 0 #fefefe, 0px -30px 0 #fefefe;
     overflow: hidden;
+    -webkit-transition: .8s ease;
     transition: .8s ease;
     
     &:hover {
@@ -163,6 +170,7 @@ button {
     }
     
     .fa-angle-down {
+        -webkit-animation: arrow 1.4s infinite linear;
         animation: arrow 1.4s infinite linear;
     }
 }
@@ -185,6 +193,7 @@ button {
     background-color: #fefefe;
     border-color: $btn_bckg;
     color: $btn_bckg;
+    -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.65);
     box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.65);
     
     &:hover {
@@ -246,11 +255,13 @@ button {
             left: 17.5%;
         }
         &::before {
+            -webkit-transform: translate(5px, 5px);
             transform: translate(5px, 5px);
         }
         &:hover {
             cursor: pointer;
             &::before {
+                -webkit-transform: translate(-5px, -5px);
                 transform: translate(-5px, -5px);
             }
         }

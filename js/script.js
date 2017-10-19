@@ -66,3 +66,20 @@ $("#btn_option_aut_2").click(function(){
 $("#close_buy").click(function(){
     $("#buy_autographed_book").css('display', 'none');
 });
+
+/* buttons to wyczerpane.pl */
+
+$('#btn_buy').click(function() {
+    window.location.href = 'http://www.wyczerpane.pl/?name=gasa';
+    return false;
+});
+
+$('#btn_option_color').click(function() {
+    window.location.href = 'http://www.wyczerpane.pl/2514,rozmowa-poprzez-dotyk-gasa-masaz-relaksacyjny-pslw-wersja-kolorowa.html';
+    return false;
+});
+
+$('#btn_option_bw').click(function() {
+    window.location.href = 'http://www.wyczerpane.pl/2515,rozmowa-poprzez-dotyk-gasa-masaz-relaksacyjny-pslw-wersja-czarno-bia-a.html';
+    return false;
+});
