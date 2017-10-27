@@ -62,7 +62,8 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 @media (min-width: 1024px) and (orientation: portrait) { .btn_buy { width: 24rem; height: 8rem; font-size: 3.2rem; margin-top: 8.5%; margin-left: 17.5%; }
   .btn_arrow { width: 80px; height: 80px; left: 17.5%; font-size: 6rem; } }
 /* for IE10+ */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { .btn_option { height: 5.8rem; } }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { .btn_option { height: 5.8rem; }
+  .btn_arrow { display: none; } }
 header { font-family: "Gruppo", cursive; font-weight: lighter; background-color: #434f34; color: #fefefe; position: fixed; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1; }
 
 .header_top { height: 8%; width: 100%; background-color: #fefefe; padding: .5rem 1rem; position: relative; }
