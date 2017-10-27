@@ -26,7 +26,7 @@ header {
     address {
         color: $font_black_color;
         font: {
-            size: 1.4rem;
+            size: 2rem;
             weight: 600;
             style: normal;
         } 
@@ -208,3 +208,17 @@ header {
 @media (min-width: 1280px) {}
 
 @media (min-width: 1600px) {}
+
+
+/* for IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    header {
+        position: static;
+        height: 70rem;
+    }
+    
+    .header_top {
+        height: 8rem;
+    }
+
+}

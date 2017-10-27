@@ -61,11 +61,13 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 @media (min-width: 1024px) { .buy_autographed_book address { font-size: 3rem; padding: .6rem; } }
 @media (min-width: 1024px) and (orientation: portrait) { .btn_buy { width: 24rem; height: 8rem; font-size: 3.2rem; margin-top: 8.5%; margin-left: 17.5%; }
   .btn_arrow { width: 80px; height: 80px; left: 17.5%; font-size: 6rem; } }
+/* for IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { .btn_option { height: 5.8rem; } }
 header { font-family: "Gruppo", cursive; font-weight: lighter; background-color: #434f34; color: #fefefe; position: fixed; top: 0; left: 0; height: 100vh; width: 100%; z-index: 1; }
 
 .header_top { height: 8%; width: 100%; background-color: #fefefe; padding: .5rem 1rem; position: relative; }
 .header_top .logo { height: 100%; width: auto; }
-.header_top address { color: #121111; font-size: 1.4rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.header_top address { color: #121111; font-size: 2rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 .header_img { background-image: url(../img/header_book_cover.jpg); background-repeat: no-repeat; background-size: cover; background-position: 31%; height: 92%; position: relative; padding: 2rem; -webkit-box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); }
 .header_img h1 { font-size: 3rem; width: 75%; margin-left: auto; margin-right: auto; text-align: center; }
@@ -91,7 +93,10 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
   .header_img h1 { font-size: 6.8rem; width: 65%; }
   .header_img h2 { font-size: 3rem; width: 65%; padding-top: 1rem; padding-bottom: 1rem; }
   .header_img h2:first-child { font-size: 3.6rem; } }
-main { min-height: 100vh; width: 100%; padding: .5rem; background-color: #fefefe; position: relative; z-index: 2; margin-top: 100vh; /* work well on Firefox and Chrome */ /* IE, Safari, iOS cannot do viewport */ }
+/* for IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { header { position: static; height: 70rem; }
+  .header_top { height: 8rem; } }
+main { min-height: 100vh; width: 100%; padding: .5rem; background-color: #fefefe; position: relative; z-index: 2; margin-top: 100vh; /* work well on Firefox and Chrome */ }
 
 article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
@@ -176,6 +181,9 @@ article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-fle
 @media (min-width: 1024px) { .column_desktop_wrapper { height: 200rem; }
   .content_wrapper { width: 1000px; margin: auto; padding-top: 2.5rem; }
   .desktop_only_book_options ul { width: 45rem; right: 47%; } }
+/* for IE10+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { main { min-height: auto; margin-top: 1rem; }
+  .desktop_only_book_options { display: none; } }
 footer { min-height: 5vh; background-color: #fefefe; margin-top: 0; margin-bottom: 0; position: relative; z-index: 2; padding: 2rem; font-family: "Gruppo", cursive; text-align: center; }
 footer address { font-size: 2.2rem; font-style: normal; font-weight: 600; margin-bottom: 1.25rem; }
 footer div#signature { font-size: 1.2rem; }
