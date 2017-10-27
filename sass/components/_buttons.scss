@@ -24,7 +24,7 @@ button {
     font-family: $header_font;
     letter-spacing: .4rem;
     text-align: center;
-    padding: 4%;
+    padding: 2rem;
     font-size: 1.5rem;
     background-color: #fefefe;
     -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
@@ -52,15 +52,16 @@ button {
         
         font-style: normal;
         margin-top: 1rem;
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: .6rem;
+        word-wrap: break-word;
         
         .important_txt {
             &:hover {
                 font-weight: 600;
                 background-color: $btn_bckg;
                 color: #fefefe;
-                padding: .8%;
+                padding: .2rem;
             }  
         }
         
@@ -71,8 +72,8 @@ button {
             display: block;
             border-top: 2px solid $dark_olive;
             margin: {
-                top: 2.8%;
-                bottom: 2.8%;
+                top: 1.6rem;
+                bottom: 2rem;
             }
             clear: both;
         }
@@ -83,8 +84,8 @@ button {
         width: 10rem;
         height: 10rem;
         margin: {
-            left: 4%;
-            bottom: 2%;
+            left: 2rem;
+            bottom: 1rem;
         } 
         -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); 
         box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
@@ -189,7 +190,7 @@ button {
         left: 12.5%;
     }
     text-align: center;
-    padding: 1%;
+    padding: .25rem;
     background-color: #fefefe;
     border-color: $btn_bckg;
     color: $btn_bckg;
@@ -221,7 +222,7 @@ button {
     .btn_option {
         height: 5rem;
         font-size: 1.4rem;
-        margin-top: 8%;
+        margin-top: 2.5rem;
     }
 }
 
@@ -281,10 +282,18 @@ button {
     }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .buy_autographed_book {
+        address {
+            font-size: 3rem;
+            padding: .6rem;
+        }    
+    }
+}
     
 
 @media (min-width: 1024px) and (orientation: portrait) {
+
     .btn_buy {
         width: 24rem;
         height: 8rem;

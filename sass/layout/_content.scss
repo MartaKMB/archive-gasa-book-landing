@@ -1,10 +1,14 @@
 main {
     min-height: 100vh;
     width: 100%;
+    padding: .5rem;
     background-color: #fefefe;
     position: relative;
-    margin-top: 100vh;
     z-index: 2;
+    
+    margin-top: 100vh;
+    /* work well on Firefox and Chrome */
+    /* IE, Safari, iOS cannot do viewport */
 }
 
 article {
@@ -30,27 +34,32 @@ article {
     background-color: #fefefe;
     position: relative;
     margin-top: 0; 
-    padding: 4%;
+    padding: .25rem;
 
     .title_about_book {
         background-color: $about_title_bckg;
-        height: 10%;
+        height: 5rem;
         width: 100%;
         text-align: center;
         color: #fefefe;
         font-size: 2.8rem;
         letter-spacing: .4rem;
-        padding: 4%;
+        padding: 1rem;
+        margin: {
+            top: 1rem;
+            bottom: 2rem;
+        }
     }
 
     section {
-        padding: 2%;
+        padding: 1rem;
         font-size: 1.8rem;
         line-height: 2rem;
 
         div {
             margin: {
-                top: 2%;
+                top: 1rem;
+                bottom: 1.5rem;
             }
         }
     }
@@ -65,15 +74,15 @@ article {
     }
 
     aside {
-        padding: 2%;
+        padding: 1rem;
         font-size: 1.4rem;
         line-height: 2rem;
         height: 20rem;
         width: 100%;
         position: relative;
         margin: {
-            top: 4%;
-            bottom: 6%;
+            top: 1rem;
+            bottom: 2rem;
         }
 
         h4 {
@@ -82,7 +91,7 @@ article {
             color: #fefefe;
             font-size: 2rem;
             letter-spacing: .4rem;
-            padding-top: 2%;
+            padding-top: .5rem;
             position: absolute;
             top: 0;
             right: 0;
@@ -104,7 +113,7 @@ article {
 
             li {
                 list-style: none;
-                margin-left: 2%;
+                margin-left: 1.25rem;
             }
 
         }
@@ -125,36 +134,46 @@ article {
     section {
         border: 2px solid #fefefe;
         margin: {
-            top: 6%;
-            bottom: 4%;
+            top: 1rem;
+            bottom: 1.25rem;
         }
-        padding: 3%;
+        padding: 1rem;
         position: relative;
 
         div {
-            margin-top: 4%;
+            margin-top: 2.2rem;
         }
 
         .options_num {
             border: 2px solid #fefefe;
-            height: 40px;
-            width: 40px;
+            height: 4rem;
+            width: 4rem;
             border-radius: 50%;
-            text-align: center;
             font-size: 3rem;
             font-weight: 600;
-            padding: 2%;
             background-color: $rosy_color;
             position: absolute;
-            top: -25px;
-            left: 2%;
+            top: -4rem;
+            left: 1rem;
             z-index: 1;
+            
+            display: -webkit-box;
+            
+            display: -ms-flexbox;
+            
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
         }
 
         h4 {
             text-align: center;
-            padding: 2%;
-            margin-top: 4%;
+            padding: 1rem;
+            margin-top: 1.5rem;
             font-size: 2rem;
 
         }
@@ -162,7 +181,7 @@ article {
         .important_txt {
             font-weight: 600;
             background-color: $btn_bckg;
-            padding: .8%;
+            padding: .25rem;
         }
 
         .up {
@@ -201,24 +220,24 @@ article {
         margin: {
             left: auto;
             right: auto;
-            top: 4%;
-            bottom: 4%;
+            top: 2rem;
+            bottom: 2rem;
         }
-        font-size: 3rem;
+        font-size: 2.8rem;
 
         &::after {
             content: '';
             display: block;
             border-top: 2px solid $about_title_bckg;
             margin: {
-                top: 2.8%;
+                top: 1rem;
             }
         }
     }
 
     div {
-        margin-bottom: 4%;
-        padding: 2%;
+        margin-bottom: 1rem;
+        padding: .25rem;
     }
 }
 
@@ -231,24 +250,25 @@ article {
         @extend .title_about_book;
         background-color: $rosy_color;
         color: #fefefe;
-        font-size: 2rem;
+        height: auto;
+        font-size: 1.8rem;
     }
 
     h4 {
         text-align: center;
         color: $btn_bckg;
         margin: {
-            top: 4%;
-            bottom: 6%;
+            top: 2rem;
+            bottom: 2rem;
         }
     }
 
     section {
         border: 2px solid $rosy_color;
-        padding: 2%;
+        padding: .25rem;
 
         div {
-            padding: 2%;
+            padding: .25rem;
             
             .important_txt {
                 background-color: $btn_bckg;
@@ -260,7 +280,8 @@ article {
 
 .article_patroni {
     @extend .article_o_ksiazce;
-    min-height: 50vh;
+    min-height: 30rem;
+    max-height: 50vh;
     position: relative;
     color: black;
     margin-top: 0;
@@ -272,7 +293,7 @@ article {
     ul {
         position: absolute;
         margin-top: 1rem;
-        top: 25%;
+        top: 5.5rem;
         width: 80%;
         height: 20rem;
         left: 50%;
@@ -290,7 +311,7 @@ article {
             list-style-type: none;
             position: absolute;
             top: 0;
-            padding: 2%;
+            padding: 1rem;
             height: 20rem;
             opacity: 0;
             text-align: center;
@@ -299,7 +320,7 @@ article {
             transform: translateX(-50%);
             -webkit-transition: 1s opacity;
             transition: 1s opacity;
-            margin: 2%;
+            margin: 1rem;
         }
 
         .active {
@@ -329,7 +350,7 @@ article {
                 width: 8rem;
                 height: 8rem;
                 border-radius: 50%;
-                margin: 3%;
+                margin: 1.5rem;
                 -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
                 box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65);
                 float: left;
@@ -338,26 +359,26 @@ article {
             h4 {
                 text-align: center;
                 margin: {
-                    top: 2%;
-                    left: 4%;
-                    bottom: 2%;
+                    top: 1rem;
+                    left: 2rem;
+                    bottom: 1rem;
                 }
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             h5 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 margin: {
-                    top: 2%;
-                    left: 4%;
-                    bottom: 2%;
+                    top: 1rem;
+                    left: 2rem;
+                    bottom: 1.5rem;
                 }
 
             }
         }
 
         .review_txt {
-            padding: 2%;
+            padding: 1rem;
             font-size: 2rem;
             clear: both;
         }
@@ -367,8 +388,8 @@ article {
             display: block;
             border-top: 2px solid $dark_olive;
             margin: {
-                top: 2.8%;
-                bottom: 2.8%;
+                top: 1.2rem;
+                bottom: 1rem;
             }
         }
     }
@@ -401,7 +422,7 @@ article {
     }
 
     .article_patroni {
-        min-height: 100vh;
+//        min-height: 100vh;
         ul {
             top: 30%;
         }
@@ -424,101 +445,80 @@ article {
 
 @media (min-width: 768px) {
     main {
-        height: 450rem;
         width: 100%;
         background-color: #fefefe;
-        margin-top: 100vh;
-        position: relative;
         z-index: 2;
     }
     
-    .content_wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(45, 10rem);
-        grid-gap: 2%;
-        .desktop_only_pict {
-            display: block;
-            height: auto;
-            width: auto;
-            padding: {
-                top: 6rem;
-                left: 4%;
-            } 
-            grid-column: 1;
-            grid-row: 1;
-            img {
-                width: 100%;
-                height: auto;
-            }
+    .column_desktop_wrapper {
+        width: 100%;
+        height: 210rem;
+        background-color: inherit;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        
+        .column {
+            width: 45%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         }
     }
-    .article_o_ksiazce {
-        position: relative;
-        height: auto;
-            width: auto;
-        grid-column: 2;
-        grid-row: 1 / 12;
-        .title_about_book {
-        height: 8rem;
-        }
-        section {
-            padding: 1%;
-            font-size: 2rem;
-        }
-        .about_gasa {
-            font-size: 1.8rem;
-        }
-    }
-    .article_opcje_zakupu {
-        position: relative;
-        height: auto;
-            width: auto;
-        margin: 4%;
-        grid-column: 1;
-        grid-row: 6 / 20;
-        .title_option {
-            font-size: 2rem;
-            padding: 1%;
-            height: 6rem;
-        }
-        section {
-            font-size: 1.6rem;
-            margin-top: 2.2%;
-            div {
-                margin-top: 4%;
-                padding-left: 2%;
-            }
-            .options_num {
-                height: 40px;
-                width: 40px;
-                font-size: 2rem;
-                padding: 1%;
-                top: -30px;
-                left: 5%;
-            }
-            h4 {
-                font-size: 2rem;
-                padding-top: 3%;
-            }
-            a:hover {
-                background-color: $btn_bckg;
-            }
-        }
-    }
-    .desktop_only_book_options {
+    
+
+    .desktop_only_pict {
         display: block;
         height: auto;
         width: auto;
-        grid-column: 2;
-        grid-row:  12 / 14 ;
-        position: relative;      
-        ul {         
+        padding: {
+            top: 4rem;
+            bottom: 2.75rem;
+            left: 2rem;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .article_opcje_zakupu {
+
+        section {
+            .options_num {
+                height: 4rem;
+                width: 4rem;
+                font-size: 3rem;
+                top: -4rem;
+                left: 5%;
+            }
+    }
+    }
+    
+    
+    .desktop_only_book_options {
+        display: block;
+            
+        ul {    
+            width: 35rem;
             position: absolute;
-            top: .5rem;
-            width: 80%;
-            height: inherit;
-            right: 5%;
+            right: 46%;
+            top: 120rem;
             li {
                 img {
                     width: auto;
@@ -527,14 +527,15 @@ article {
                     max-width: 75%;               
                 }
                 border: 2px solid $rosy_color;
-                border-left: none;
+                border-right: none;
                 width: 100%;
-                min-height: 45rem;
+                min-height: 50rem;
                 list-style-type: none;
                 position: absolute;
                 top: 0;
                 opacity: 0;
                 text-align: center;
+                font-family: $header_font;
                 font-size: 1.8rem;
                 -webkit-transition: 1s opacity;
                 transition: 1s opacity;
@@ -552,61 +553,16 @@ article {
         }
     }
     .article_o_autorce {
-        position: relative;
-        height: auto;
-        width: auto;    
-        grid-column: 1 / 3;
-        grid-row: 20 / 24;
-        h3 {
-            width: 40%;
-            position: absolute;
-            top: 4rem;
-            left: 3rem;
-        }
-        .author_pict {
-            display: block;
-            width: 65%;
-            height: auto;
-            margin: {
-                left: auto;
-                right: 2%;
-                bottom: 3%;
-            }
-        }
-        h4 {
-            font-size: 2.6rem;
-            position: absolute;
-            top: 8rem;
-            left: 4rem;
-        }
-        div {
-            margin-bottom: 1%;
-            padding: 1%;
-        }
+        padding: 2rem;
     }
+    
     .article_opcja_ksiazka_autograf {
-        position: relative;
-        height: auto;
-        width: auto;
-        grid-column: 1 / 3;
-        grid-row: 26 / 29;
-        h4 {
-            font-size: 2.4rem;
-            margin-bottom: 4%;
-        }
+
         section {
-            border: 2px solid $rosy_color;
-            padding: 2%;
-            div {
-                padding: 0;
-            }
+            padding: 2rem;
             a:hover {
                 background-color: $btn_bckg;
                 color: #fefefe;
-            }
-            .btn_option {
-                font-size: 1.6rem;
-                height: 4rem;
             }
         }
     }
@@ -614,8 +570,6 @@ article {
         position: relative;
         height: auto;
         width: auto;
-        grid-column: 1 / 3;
-        grid-row: 32;
         .mobile_only {
             display: none;
         }
@@ -623,27 +577,15 @@ article {
             display: block;
             width: 100%;
             height: auto;
+            margin: {
+                top: 2.25rem;
+                bottom: 2rem;
+            }
         }
     }
-    .article_recenzje {
-        position: relative;
-        height: auto;
-        width: auto;
-        grid-column: 1 / 3;
-        grid-row: 35 / 46;
-        section {
-            position: relative;
-            .review_about {
-                img {
-                    width: 10rem;
-                    height: 10rem;
-                }
-            }
-            .review_txt {
-                padding: 2%;
-                font-size: 2rem;
-            }
-        }
+    
+    .article_recenzje {  
+
     }
 }
 
@@ -652,43 +594,28 @@ article {
 
 
 @media (min-width: 1024px) {
-    main {
-        height: 470rem;   
+    
+    .column_desktop_wrapper {
+        height: 200rem;
     }
+   
     .content_wrapper {
-        width: 900px;
+        width: 1000px;
         margin: auto;
         padding-top: 2.5rem;
     }
-    .article_opcje_zakupu {
-        grid-row: 5 / 21;
-        section {
-            font-size: 2.4rem;
-        }  
+    
+    .desktop_only_book_options {    
+        ul {    
+            width: 45rem;
+            right: 47%;
+        }
     }
-    .article_o_autorce {
-        grid-row: 21 / 28;
-    }
-    .article_opcja_ksiazka_autograf {
-        grid-row: 27 / 28;
-    }
-    .article_patroni {
-        grid-row: 32;   
-    }
-    .article_recenzje {   
-        width: 100vw;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+    
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {}
 
-@media (min-width: 1280px) {
-     main {
-        height: 500rem;   
-    }
-}
+@media (min-width: 1280px) {}
 
 @media (min-width: 1600px) {}

@@ -7,7 +7,7 @@ footer {
     } 
     position: relative;
     z-index: 2;
-    padding: 4%;
+    padding: 2rem;
     font-family: $header_font;
     text-align: center;
     
@@ -15,10 +15,16 @@ footer {
         font-size: 2.2rem;
         font-style: normal;
         font-weight: 600;
-        margin-bottom: 2%;
+        margin-bottom: 1.25rem;
     }
     
     div#signature {
         font-size: 1.2rem;
+        
+        a {
+            &:hover {
+            text-decoration: underline;
+            }
+        }    
     }
 }

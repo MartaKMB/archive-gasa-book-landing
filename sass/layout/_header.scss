@@ -15,7 +15,7 @@ header {
     height: 8%;
     width: 100%;
     background-color: #fefefe;
-    padding: 1.2% 2.8%;
+    padding: .5rem 1rem;
     position: relative;
     
     .logo {
@@ -49,7 +49,7 @@ header {
     }
     height: 92%;
     position: relative;
-    padding: 3.2%;
+    padding: 2rem;
     -webkit-box-shadow: 0px .8px 8px .8px rgba(1,2,1,0.65);
     box-shadow: 0px .8px 8px .8px rgba(1,2,1,0.65);
 
@@ -69,8 +69,8 @@ header {
             display: block;
             border-top: 2px solid rgba(255, 255, 255, 0.44);
             margin: {
-                top: 2.8%;
-                bottom: 2.8%;
+                top: 1.5rem;
+                bottom: 1.75rem;
             }
         }
         
@@ -90,8 +90,8 @@ header {
         }
         
         padding: {
-            top: 2.6%;
-            bottom: 2.6%;
+            top: 1.2rem;
+            bottom: 1.2rem;
         }
         text-align: center;
         
@@ -108,7 +108,7 @@ header {
         height: 12%;
         width: 100%;
         background-color: #fefefe;
-        padding: 1% 2.8%;
+        padding: .25rem 1.2rem;
         position: relative;
         address {
             font-size: 1.8rem;
@@ -116,17 +116,17 @@ header {
     }
     .header_img {
         background-position: 2%;
-        padding: 1.8%;
+        padding: .75rem;
         h1 {
             width: 30%;
-            margin-left: 2.8%;
+            margin-left: 1.2rem;
         }
         h2 {
             width: 30%;
-            margin-left: 2.8%;
+            margin-left: 1.2rem;
             padding: {
-                top: 1%;
-                bottom: 1%;
+                top: .25rem;
+                bottom: .25rem;
             }
         }
     }
@@ -144,8 +144,8 @@ header {
             width: 35%;
             font-size: 2.4rem;
             padding: {
-                top: .2%;
-                bottom: .2%;
+                top: .2rem;
+                bottom: .2rem;
             }
             &:first-child {
                 font-size: 2.8rem;
@@ -168,8 +168,8 @@ header {
         h2 {
             font-size: 2.4rem;
             padding: {
-                top: 2%;
-                bottom: 2%;
+                top: .75rem;
+                bottom: .75rem;
             }
             &:first-child {
                 font-size: 2.8rem;
@@ -195,8 +195,8 @@ header {
             font-size: 3rem;
             width: 65%;
             padding: {
-                top: 2%;
-                bottom: 2%;
+                top: 1rem;
+                bottom: 1rem;
             }
             &:first-child {
                 font-size: 3.6rem;
