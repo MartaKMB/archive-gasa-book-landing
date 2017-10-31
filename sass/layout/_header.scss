@@ -26,7 +26,7 @@ header {
     address {
         color: $font_black_color;
         font: {
-            size: 2rem;
+            size: 1.25rem;
             weight: 600;
             style: normal;
         } 
@@ -132,7 +132,13 @@ header {
     }
 } 
 
-@media (min-width: 530px) {}
+@media (min-width: 530px) {
+    .header_top {
+        address {
+            font-size: 1.8rem;
+        }
+    }
+}
 
 @media (min-width: 768px) {
     .header_img {

@@ -22,7 +22,7 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 
 /* pop up - buy book with autograph */
 .buy_autographed_book { display: none; position: fixed; top: 15%; left: 10%; width: 80%; z-index: 2; font-family: "Gruppo", cursive; letter-spacing: .4rem; text-align: center; padding: 2rem; font-size: 1.5rem; background-color: #fefefe; -webkit-box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.65); }
-.buy_autographed_book i { position: absolute; top: 4%; right: 2%; }
+.buy_autographed_book i { position: absolute; top: 4%; right: 2%; cursor: pointer; }
 .buy_autographed_book i:hover { color: #cf1e25; }
 .buy_autographed_book h3 { padding: .4rem; font-size: 1.8rem; }
 .buy_autographed_book address { font-style: normal; margin-top: 1rem; font-size: 1.6rem; padding: .6rem; word-wrap: break-word; }
@@ -49,8 +49,9 @@ button { background-color: inherit; border: 2px solid #cf1e25; padding: 1rem; co
 @media (orientation: landscape) { .btn_buy { margin-top: 3.8%; margin-left: 75%; }
   .btn_arrow { bottom: 11.2%; left: 5.5%; }
   .btn_option { height: 5rem; font-size: 1.4rem; margin-top: 2.5rem; } }
-@media (min-width: 768px) { .btn_buy { width: 18rem; height: 4.6rem; font-size: 2rem; margin-top: 4.5%; margin-left: 2.8%; }
-  .btn_arrow { width: 60px; height: 60px; font-size: 5rem; left: 88%; } }
+@media (min-width: 768px) { button { cursor: pointer; }
+  .btn_buy { width: 18rem; height: 4.6rem; font-size: 2rem; margin-top: 4.5%; margin-left: 2.8%; }
+  .btn_arrow { width: 60px; height: 60px; font-size: 5rem; left: 88%; cursor: pointer; } }
 @media (min-width: 768px) and (orientation: portrait) { .btn_buy { width: 22rem; height: 8rem; font-size: 2.4rem; margin-top: 8.5%; margin-left: 17.5%; }
   .btn_buy::before { -webkit-transform: translate(5px, 5px); transform: translate(5px, 5px); }
   .btn_buy:hover { cursor: pointer; }
@@ -68,7 +69,7 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
 
 .header_top { height: 8%; width: 100%; background-color: #fefefe; padding: .5rem 1rem; position: relative; }
 .header_top .logo { height: 100%; width: auto; }
-.header_top address { color: #121111; font-size: 2rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.header_top address { color: #121111; font-size: 1.25rem; font-weight: 600; font-style: normal; display: block; position: absolute; top: 50%; right: 2.8%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 .header_img { background-image: url(../img/header_book_cover.jpg); background-repeat: no-repeat; background-size: cover; background-position: 31%; height: 92%; position: relative; padding: 2rem; -webkit-box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); box-shadow: 0px 0.8px 8px 0.8px rgba(1, 2, 1, 0.65); }
 .header_img h1 { font-size: 3rem; width: 75%; margin-left: auto; margin-right: auto; text-align: center; }
@@ -83,6 +84,7 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
   .header_img { background-position: 2%; padding: .75rem; }
   .header_img h1 { width: 30%; margin-left: 1.2rem; }
   .header_img h2 { width: 30%; margin-left: 1.2rem; padding-top: .25rem; padding-bottom: .25rem; } }
+@media (min-width: 530px) { .header_top address { font-size: 1.8rem; } }
 @media (min-width: 768px) { .header_img h1 { font-size: 5rem; width: 35%; }
   .header_img h2 { width: 35%; font-size: 2.4rem; padding-top: .2rem; padding-bottom: .2rem; }
   .header_img h2:first-child { font-size: 2.8rem; } }
@@ -186,8 +188,11 @@ article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-fle
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { main { min-height: auto; margin-top: 1rem; }
   .desktop_only_book_options { display: none; } }
 footer { min-height: 5vh; background-color: #fefefe; margin-top: 0; margin-bottom: 0; position: relative; z-index: 2; padding: 2rem; font-family: "Gruppo", cursive; text-align: center; }
-footer address { font-size: 2.2rem; font-style: normal; font-weight: 600; margin-bottom: 1.25rem; }
+footer address { font-size: 1.4rem; font-style: normal; font-weight: 600; margin-bottom: 1.25rem; }
 footer div#signature { font-size: 1.2rem; }
 footer div#signature a:hover { text-decoration: underline; }
+
+/* media queries */
+@media (min-width: 768px) { footer address { font-size: 1.8rem; } }
 
 /*# sourceMappingURL=main.css.map */
