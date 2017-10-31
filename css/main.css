@@ -99,7 +99,7 @@ header { font-family: "Gruppo", cursive; font-weight: lighter; background-color:
 /* for IE10+ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { header { position: static; height: 70rem; }
   .header_top { height: 8rem; } }
-main { min-height: 100vh; width: 100%; padding: .5rem; background-color: #fefefe; position: relative; z-index: 2; margin-top: 100vh; /* work well on Firefox and Chrome */ }
+main { min-height: 100vh; width: 100%; padding: .5rem; background-color: #fefefe; position: relative; z-index: 2; margin-top: 100vh; /* work well on Firefox and Chrome for IE media query */ }
 
 article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
@@ -180,7 +180,7 @@ article { font-family: "Gruppo", cursive; display: -webkit-box; display: -ms-fle
   .article_opcja_ksiazka_autograf section a:hover { background-color: #cf1e25; color: #fefefe; }
   .article_patroni { position: relative; height: auto; width: auto; }
   .article_patroni .mobile_only { display: none; }
-  .article_patroni .desktop_only_patron { display: block; width: 100%; height: auto; margin-top: 2.25rem; margin-bottom: 2rem; } }
+  .article_patroni .desktop_only_patron { display: block; width: 100%; height: auto; max-height: 360px; margin-top: 2.25rem; margin-bottom: 2rem; } }
 @media (min-width: 1024px) { .column_desktop_wrapper { height: 200rem; }
   .content_wrapper { width: 1000px; margin: auto; padding-top: 2.5rem; }
   .desktop_only_book_options ul { width: 45rem; right: 47%; } }

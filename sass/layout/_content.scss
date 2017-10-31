@@ -7,7 +7,7 @@ main {
     z-index: 2;
     
     margin-top: 100vh;
-    /* work well on Firefox and Chrome */
+    /* work well on Firefox and Chrome for IE media query */
 }
 
 article {
@@ -576,15 +576,12 @@ article {
             display: block;
             width: 100%;
             height: auto;
+            max-height: 360px;
             margin: {
                 top: 2.25rem;
                 bottom: 2rem;
             }
         }
-    }
-    
-    .article_recenzje {  
-
     }
 }
 
